@@ -58,5 +58,12 @@
   <li>In order to use outside the Class "ServerComponent", add the code <code>export class ServerComponent &#123; &#125;</code></li>
   <li>To define the Class "ServerComponent" it is not just a normal Typescript class but a Component, we have to add the Decorator <b>@Component()</b></li>
   <li>The Decorator @Component has to be imported <code>import &#123;Component} from '@angular/core'; </code></li>
+  <li>Next step is pass the JavaScript object to the @Component Decorator:<br><code>
+    @Component(&#123; <br>
+    selector: 'app-server',<br>
+    &#125;)
+  </code>
+  </li>
+  <li>The selector JS object is the name used to called the Class.component.html file content, into another Class.component.html file using the tags <code>&#60;app-server>&#60;/app-server></code> </li>
 </ul>
   <router-outlet></router-outlet>

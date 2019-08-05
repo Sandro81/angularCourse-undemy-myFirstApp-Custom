@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 
-@Component()
+@Component({
+  selector:
+})
 
 export class ServerComponent {
 
