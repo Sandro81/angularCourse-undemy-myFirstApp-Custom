@@ -55,5 +55,8 @@
 <ul>
   <li>Creation a new directory with the same name of the component, like "app/server" folder</li>
   <li>into the "app/server" folder, create the Typescript server.component.ts file</li>
+  <li>In order to use outside the Class "ServerComponent", add the code <code>export class ServerComponent &#123; &#125;</code></li>
+  <li>To define the Class "ServerComponent" it is not just a normal Typescript class but a Component, we have to add the Decorator <b>@Component()</b></li>
+  <li>The Decorator @Component has to be imported <code>import &#123;Component} from '@angular/core'; </code></li>
 </ul>
   <router-outlet></router-outlet>
