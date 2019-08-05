@@ -12,15 +12,31 @@
 <h2>Custom Example of coding:</h2>
 
 
-<h3>Change a TEXT dinamically using an input and the DIRECTIVE [(ngModel)]="var":</h3>
+<h3>Lesson 06 -> Change a TEXT dinamically using an input and the DIRECTIVE [(ngModel)]="var":</h3>
 <ul>
-  <li>
-    You have to import into the app.module.ts the class:
-  </li>
+  <li>You have to import into the app.module.ts the class:</li>
 <li>import &#123; FormsModule } from '@angular/forms';</li>
   <li>And add into the "imports" Array the "FormsModule"</li>
+  <li>"FormsModule" it is a TypeScript object</li>
 </ul>
 <input type="text" [(ngModel)]="randomVariable">
 <p>{{randomVariable}}</p>
 <hr>
+<h3>Lesson 10 -> A Basic Project Setup using Bootstrap for Styling</h3>
+<ul>
+  <li>Install/import bootstrap</li>
+  <li>Type ->  npm install --save bootstrap@4</li>
+  <li>Add into -> Config File -> angular.json -></li>
+  <li>"build": &#123;<br>
+  "styles": [<br>
+"node_modules/bootstrap/dist/css/bootstrap.min.css",<br>
+"src/styles.css",<br>
+],&#125;</li>
+<li><div class="alert alert-primary" role="alert">
+ Bootstrap Style works!
+</div></li>
+</ul>
+
+
+
 <router-outlet></router-outlet>
