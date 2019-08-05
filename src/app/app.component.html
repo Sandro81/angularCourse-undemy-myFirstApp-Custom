@@ -45,6 +45,7 @@
   <li>The Name "app-root" is declared into the app.component.ts file at the Selector parameter:<br> <code>@Component(&#123;<br>
     selector: 'app-root',&#125;</code></li>
   </ul>
-
+<li>The first code executed by Angular is the code conteined by the "main.ts" file, where in fact is present the <code>platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));</code> declaration that called the AppModule Class into the bootstrapModule.</li>
 
   <router-outlet></router-outlet>
