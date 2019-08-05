@@ -47,5 +47,6 @@
   </ul>
 <li>The first code executed by Angular is the code conteined by the "main.ts" file, where in fact is present the <code>platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));</code> declaration that called the AppModule Class into the bootstrapModule.</li>
+<li>Into the AppModule class it is declared and imported the AppComponent Class passing it into the "bootstrap" parameter: <br> <code>@NgModule(&#123;<br>bootstrap: [AppComponent]&#125;)</code></li>
 
   <router-outlet></router-outlet>
