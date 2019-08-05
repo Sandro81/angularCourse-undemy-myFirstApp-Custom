@@ -61,9 +61,11 @@
   <li>Next step is pass the JavaScript object to the @Component Decorator:<br><code>
     @Component(&#123; <br>
     selector: 'app-server',<br>
+    templateUrl: './server.component.html'
     &#125;)
   </code>
   </li>
-  <li>The selector JS object is the name used to called the Class.component.html file content, into another Class.component.html file using the tags <code>&#60;app-server>&#60;/app-server></code> </li>
+  <li>The <b>selector</b> JS object is the name used to called the Class.component.html file content, into another Class.component.html file using the tags <code>&#60;app-server>&#60;/app-server></code> </li>
+  <li>The <b>templateUrl</b> JS object point to the path where is located the HTML compenent that angular will used to render the sub page content into the e.g. <code>&#60;app-server>&#60;/app-server></code> </li>
 </ul>
   <router-outlet></router-outlet>
