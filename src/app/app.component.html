@@ -68,6 +68,7 @@
   <li>The <b>selector</b> JS object is the name used to called the Class.component.html file content, into another Class.component.html file using the tags <code>&#60;app-server>&#60;/app-server></code> </li>
   <li>The <b>templateUrl</b> JS object point to the path where is located the HTML compenent that angular will used to render the sub page content into the e.g. <code>&#60;app-server>&#60;/app-server></code> </li>
 </ul>
+<hr>
 <h3>Lesson 16 -> Understanding the Role of AppModule and Component Declaration</h3>
 <ul>
   <li>To use the new Component, we have to import into the Decorator @NgModule() contained into the app.module.ts into the "declarations:" properties.</li>
@@ -79,4 +80,10 @@
   <li> Angular don't know if a new component exist or not, we have to add it by default into the @NgModule() decorator, and import the class<br>
     <code>import &#123; <b>ServerComponent</b> &#125; from './server/server.component';</code></li>
   </ul>
+<hr>
+<h3>Lesson 17 -> Using Custom Components</h3>
+<ul>
+  <li>To include the new component into another component, after to import the new component into the app.module.ts, we have to user the <code>&#60;app-server>&#60;/app-server></code> like this:</li>
+  <app-server></app-server>
+</ul>
     <router-outlet></router-outlet>
