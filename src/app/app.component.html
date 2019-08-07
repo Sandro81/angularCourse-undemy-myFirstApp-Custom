@@ -99,5 +99,14 @@
     name.component.ts<br>
   </li>
   <li><app-servers></app-servers></li>
+  <hr>
+  <h3>Lesson 19 -> Working with Component Templates</h3>
+  <li>Instead of declare and pass a template as a file, it is possible also to pass other template or add some HTML code into the @Component() Decorator e.g.:</li>
+  <li><code>@Component(&#123;<br>
+    selector: 'app-servers-l19',<br>
+    templateUrl: '<app-server></app-server>',<br>
+    styleUrls: ['./servers-l19.component.css']<br>
+    &#125;)</code></li>
 </ul>
+
     <router-outlet></router-outlet>

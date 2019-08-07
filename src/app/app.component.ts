@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Udemy Course 06 Custom';
+  title = 'Udemy Course from 06 to 18 Custom';
   name = 'My first App';
   randomVariable = 'SandoR';
 }
