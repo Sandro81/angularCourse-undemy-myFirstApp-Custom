@@ -101,13 +101,13 @@
   <li><app-servers></app-servers></li>
   <hr>
   <h3>Lesson 19 -> Working with Component Templates</h3>
-  <li>Instead of declare and pass a template as a file, it is possible also to pass other template or add some HTML code into the @Component() Decorator e.g.:</li>
+  <li>Instead of declare and pass a templateUrl as a file, it is possible also to pass other template or add some HTML code into the @Component() decorator, passing the <b>template</b> object instead of the templateUrl, e.g.:</li>
   <li><code>@Component(&#123;<br>
     selector: 'app-servers-l19',<br>
-    <b>templateUrl</b>: '&#60;app-server>&#60;/app-server>',<br>
+    <b>template</b>: '&#60;app-server>&#60;/app-server>',<br>
     styleUrls: ['./servers-l19.component.css']<br>
     &#125;)</code></li>
-  <li>If we call the &#60;app-server-l19>&#60;/app-server-l19> into the app.component.html, they code will call the &#60;app-server>&#60;/app-server> passing through the templateUrl </li>
+  <li>If we call the &#60;app-server-l19>&#60;/app-server-l19> into the app.component.html, they code will call the &#60;app-server>&#60;/app-server> passing through the template </li>
   <li><app-servers-l19></app-servers-l19></li>
 </ul>
 
