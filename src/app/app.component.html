@@ -104,9 +104,11 @@
   <li>Instead of declare and pass a template as a file, it is possible also to pass other template or add some HTML code into the @Component() Decorator e.g.:</li>
   <li><code>@Component(&#123;<br>
     selector: 'app-servers-l19',<br>
-    templateUrl: '<app-server></app-server>',<br>
+    <b>templateUrl</b>: '&#60;app-server>&#60;/app-server>',<br>
     styleUrls: ['./servers-l19.component.css']<br>
     &#125;)</code></li>
+  <li>If we call the &#60;app-server-l19>&#60;/app-server-l19> into the app.component.html, they code will call the &#60;app-server>&#60;/app-server> passing through the templateUrl </li>
+  <li><app-servers-l19></app-servers-l19></li>
 </ul>
 
     <router-outlet></router-outlet>
