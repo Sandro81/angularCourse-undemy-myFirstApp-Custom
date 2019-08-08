@@ -120,6 +120,21 @@
       color: blue;<br>
       `&#125;]</code></li>
 </ul>
-
+<hr>
+<h3>Lesson 21 -> Fully Understanding the Component Selector</h3>
+<ul><li>
+  There are different way to declare the <b>selector</b> into the @Component decorator.
+</li>
+<li>Using css selector:<br>
+<code>selector: 'app-servers'</code></li>
+<li>Selecting by elements using [''] as attribute:<br>
+<code>selector: '[app-servers]'</code><br>
+  And in the component.html we are going to call it as attribute:<br>
+<code>&#60;div app-servers> &#60;/div></code></li>
+  <li>It is possible also to select the component by class:<br>
+    <code>selector: '<b>.app-servers</b>'</code><br>
+    And in the component.html we are going to call it as attribute:<br>
+    <code>&#60;div class="<b>app-servers</b>"> &#60;/div></code></li>
+</ul>
 
     <router-outlet></router-outlet>
