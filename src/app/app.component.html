@@ -164,9 +164,18 @@
 <hr>
 <h3>Lesson 25 -> Property Binding</h3>
 <li>If we want the binding a property of a button, for example if we want to disable or enable it dynamically, it is possible to use property binding.</li>
-<li>e.g. into the serves-l25.component.ts file we will create a </li>
-
-
+<li>e.g. into the serves-l25.component.ts file we will create:<br>
+<code>allowNewServer = false;</code><br>
+<code>constructor() &#123;<br>
+  setTimeout(() => &#123; this.allowNewServer = !this.allowNewServer;}, 2000);<br>
+  &#125;
+</code></li>
+<li>into the html code will binding the property "disabled" into square brackets [disabled]<br>
+  <code> &#60;button class="btn btn-primary" [disabled]="allowNewServer">Add Server&#60;/button></code>
+</li>
+<li>Result:<br>
+<app-servers-l25></app-servers-l25></li>
+<li>The setTimeout function is executed once into the constructor</li>
 
 
 
