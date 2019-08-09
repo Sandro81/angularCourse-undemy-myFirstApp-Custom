@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
 import { ServersL19Component } from './servers-l19/servers-l19.component';
+import { ServerL24Component } from './server-l24/server-l24.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
     ServersComponent,
-    ServersL19Component
+    ServersL19Component,
+    ServerL24Component
   ],
   imports: [
     BrowserModule,

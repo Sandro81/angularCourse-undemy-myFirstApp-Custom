@@ -147,5 +147,15 @@
   <li>3 -> <b>Event Binding</b> (event)="expression"</li>
   <li>4 -> Combination of Both: <b>Two-way-Binding</b> [(ngModel)]="data"</li>
 </ul>
+<hr>
+<h3>Lesson 24 -> String Interpolation</h3>
+<ul>
+  <li>First we have to create variable into the component.ts (e.g. server-l24.component.ts)<br>
+    <code><b>serverId</b>: number = 10;<br>
+      <b>serverStatus</b>: string = 'offline';</code></li>
+  <li>Then it is possible to pass those string interpolation into the component.html (e.g. server-l24.component.html)<br>
+  <code>The server with ID &#123;&#123; serverId }} is &#123;&#123; serverStatus }}</code></li>
+  <li><app-server-l24></app-server-l24></li>
+</ul>
 
     <router-outlet></router-outlet>
