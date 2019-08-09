@@ -150,12 +150,24 @@
 <hr>
 <h3>Lesson 24 -> String Interpolation</h3>
 <ul>
-  <li>First we have to create variable into the component.ts (e.g. server-l24.component.ts)<br>
+  <li>With String Interpolation it is possible pass the information content into the component.ts like variable or method return (e.g. server-l24.component.ts)<br>
     <code><b>serverId</b>: number = 10;<br>
-      <b>serverStatus</b>: string = 'offline';</code></li>
+      <b>serverStatus</b>: string = 'offline';<br><br>
+    getServerStatus()&#123;<br>
+    return this.serverStatus;<br>
+    }</code></li>
+
   <li>Then it is possible to pass those string interpolation into the component.html (e.g. server-l24.component.html)<br>
-  <code>The server with ID &#123;&#123; serverId }} is &#123;&#123; serverStatus }}</code></li>
+  <code>The server with ID &#123; &#123; serverId &#125;&#125; is &#123; &#123; getServerStatus() }}</code></li>
   <li><app-server-l24></app-server-l24></li>
 </ul>
+<hr>
+<h3>Lesson 25 -> Property Binding</h3>
+<li>If we want the binding a property of a button, for example if we want to disable or enable it dynamically, it is possible to use property binding.</li>
+<li>e.g. into the serves-l25.component.ts file we will create a </li>
+
+
+
+
 
     <router-outlet></router-outlet>

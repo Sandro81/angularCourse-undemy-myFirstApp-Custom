@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
 import { ServersL19Component } from './servers-l19/servers-l19.component';
 import { ServerL24Component } from './server-l24/server-l24.component';
+import { ServersL25Component } from './servers-l25/servers-l25.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ServerL24Component } from './server-l24/server-l24.component';
     ServerComponent,
     ServersComponent,
     ServersL19Component,
-    ServerL24Component
+    ServerL24Component,
+    ServersL25Component
   ],
   imports: [
     BrowserModule,
