@@ -17,11 +17,6 @@ export class L29DataEventComponent implements OnInit {
 
   onUpdateName(event: Event){
     this.eventText = (<HTMLInputElement>event.target).value;
-    this.onAnyEvent(event);
-  }
-
-  onAnyEvent(event: any){
-    this.anyEvent = event;
   }
 
 }
