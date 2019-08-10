@@ -1,0 +1,18 @@
+<form>
+  <div class="form-row align-items-center">
+    <div class="col-sm-3 my-1">
+      <label class="sr-only" for="l30">l30</label>
+      <input type="text"
+             class="form-control"
+             id="l30"
+             placeholder="Type something"
+             name="l30"
+             [(ngModel)]="eventText">
+    </div>
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+
+</form>
+<p>{{eventText}}</p>
