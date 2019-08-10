@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./l30-two-way-databinding.component.css']
 })
 export class L30TwoWayDatabindingComponent implements OnInit {
-
+  eventText = 'Initial Text'
   constructor() { }
 
   ngOnInit() {

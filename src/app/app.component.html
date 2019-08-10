@@ -221,26 +221,31 @@
 </ul>
 <app-l29-data-event></app-l29-data-event>
 <hr>
-<h3>Lesson 30 -> Two-Way-Databinding</h3>
-<p>When an event happens, it is possible to pass the "$event" variable to the method</p>
-<p>$event represent the data of the event</p>
+<h3>Lesson 31 -> Two-Way-Databinding</h3>
+<p>Important> To be able to use 'ngModel', the FormsModule (from @angular/forms) needs to be added to your imports[] array in the AppModule (should be there by default in a CLI project)!</p>
+<p></p>
 <ul>
-  <li>As for the click event, also for the input field it is possible to set the (input) event, passing the $event into the method called</li>
+  <li>Two way data binding can is use to chain input and output together, in fact the input is filled by the variable delcared into the [(ngModel)] data</li>
+  <li>when the input data changed also the variable changes</li>
   <li><code>      &#60;input type="text"<br>
     class="form-control"<br>
     id="inlineFormInputName"<br>
     placeholder="Type something"<br>
-    <b>(input)="onUpdateName($event)"</b>></code></li>
-  <li>In the Component side:<br>
-    <code> onUpdateName(event: Event)&#123;<br>
-      this.eventText = (&#60;HTMLInputElement>event.target).value;<br>
-      }<br>
-    </code>
-  </li>
-  <li>It is mandatory to explicity declare the event with the formula (&#60;HTMLInputElement>event.target).value;</li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement" target="_blank">HTMLInputElement</a>
-  </li>
+    <b>[(ngModel)]="eventText"</b>></code></li>
+  <li>As you can see, the placeholder is override by the ngModel content</li>
 </ul>
-<app-l29-data-event></app-l29-data-event>
+<app-l30-two-way-databinding></app-l30-two-way-databinding>
 
+
+<hr>
+<h3>Lesson 33 -> Assignment</h3>
+<p>Important> To be able to use 'ngModel', the FormsModule (from @angular/forms) needs to be added to your imports[] array in the AppModule (should be there by default in a CLI project)!</p>
+<p></p>
+<ul>
+  <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
+  <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+  <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+  <li>Upon clicking the button, the username should be reset to an empty string</li>
+</ul>
+<app-l30-two-way-databinding></app-l30-two-way-databinding>
 <router-outlet></router-outlet>
