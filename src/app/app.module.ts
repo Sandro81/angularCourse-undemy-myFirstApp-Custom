@@ -8,6 +8,8 @@ import { ServersComponent } from './servers/servers.component';
 import { ServersL19Component } from './servers-l19/servers-l19.component';
 import { ServerL24Component } from './server-l24/server-l24.component';
 import { ServersL25Component } from './servers-l25/servers-l25.component';
+import { L27EventBindingComponent } from './l27-event-binding/l27-event-binding.component';
+import { L29DataEventComponent } from './l29-data-event/l29-data-event.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ServersL25Component } from './servers-l25/servers-l25.component';
     ServersComponent,
     ServersL19Component,
     ServerL24Component,
-    ServersL25Component
+    ServersL25Component,
+    L27EventBindingComponent,
+    L29DataEventComponent
   ],
   imports: [
     BrowserModule,
