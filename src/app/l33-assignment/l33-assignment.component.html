@@ -10,10 +10,24 @@
              [(ngModel)]="username" (input)="buttonEnable()">
     </div>
     <div class="col-auto my-1">
-      <button type="submit" class="btn btn-primary" [disabled]="!allowButton">Submit</button>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="!allowButton"
+        (click)="resetButton()">Submit</button>
+    </div>
+<hr>
+    <div class="col-auto my-1">
+      <h4>Better solution</h4>
+      <p>Use the property binding in this way <b>[disabled]="username === ''"</b></p>
+      <p>Use the Event binding in this way <b>(click)="username = ''"</b></p>
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="username === ''"
+        (click)="username = ''">Submit</button>
     </div>
   </div>
-
 </form>
 <p>{{username}}</p>
 <p>Button is -> {{allowButton}}</p>

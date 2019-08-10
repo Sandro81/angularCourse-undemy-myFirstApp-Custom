@@ -17,4 +17,9 @@ export class L33AssignmentComponent implements OnInit {
       this.allowButton = true;
     }
   }
+
+  resetButton(){
+    this.username = '';
+    this.allowButton = false;
+  }
 }
