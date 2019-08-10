@@ -202,9 +202,45 @@
 <h3>Lesson 29 -> Passing and Using Data with Event Binding</h3>
 <p>When an event happens, it is possible to pass the "$event" variable to the method</p>
 <p>$event represent the data of the event</p>
-
 <ul>
-  <li></li>
+  <li>As for the click event, also for the input field it is possible to set the (input) event, passing the $event into the method called</li>
+  <li><code>      &#60;input type="text"<br>
+                         class="form-control"<br>
+                         id="inlineFormInputName"<br>
+                         placeholder="Type something"<br>
+    <b>(input)="onUpdateName($event)"</b>></code></li>
+  <li>In the Component side:<br>
+   <code> onUpdateName(event: Event)&#123;<br>
+    this.eventText = (&#60;HTMLInputElement>event.target).value;<br>
+    }<br>
+   </code>
+  </li>
+  <li>It is mandatory to explicity declare the event with the formula (&#60;HTMLInputElement>event.target).value;</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement" target="_blank">HTMLInputElement</a>
+  </li>
 </ul>
 <app-l29-data-event></app-l29-data-event>
+<hr>
+<h3>Lesson 30 -> Two-Way-Databinding</h3>
+<p>When an event happens, it is possible to pass the "$event" variable to the method</p>
+<p>$event represent the data of the event</p>
+<ul>
+  <li>As for the click event, also for the input field it is possible to set the (input) event, passing the $event into the method called</li>
+  <li><code>      &#60;input type="text"<br>
+    class="form-control"<br>
+    id="inlineFormInputName"<br>
+    placeholder="Type something"<br>
+    <b>(input)="onUpdateName($event)"</b>></code></li>
+  <li>In the Component side:<br>
+    <code> onUpdateName(event: Event)&#123;<br>
+      this.eventText = (&#60;HTMLInputElement>event.target).value;<br>
+      }<br>
+    </code>
+  </li>
+  <li>It is mandatory to explicity declare the event with the formula (&#60;HTMLInputElement>event.target).value;</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement" target="_blank">HTMLInputElement</a>
+  </li>
+</ul>
+<app-l29-data-event></app-l29-data-event>
+
 <router-outlet></router-outlet>

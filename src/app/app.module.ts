@@ -10,6 +10,7 @@ import { ServerL24Component } from './server-l24/server-l24.component';
 import { ServersL25Component } from './servers-l25/servers-l25.component';
 import { L27EventBindingComponent } from './l27-event-binding/l27-event-binding.component';
 import { L29DataEventComponent } from './l29-data-event/l29-data-event.component';
+import { L30TwoWayDatabindingComponent } from './l30-two-way-databinding/l30-two-way-databinding.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { L29DataEventComponent } from './l29-data-event/l29-data-event.component
     ServerL24Component,
     ServersL25Component,
     L27EventBindingComponent,
-    L29DataEventComponent
+    L29DataEventComponent,
+    L30TwoWayDatabindingComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class L29DataEventComponent implements OnInit {
 
   eventText = '';
-  anyEvent = '';
 
   constructor() { }
 
