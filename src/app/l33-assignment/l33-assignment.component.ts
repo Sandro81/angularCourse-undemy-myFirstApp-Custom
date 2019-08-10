@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./l33-assignment.component.css']
 })
 export class L33AssignmentComponent implements OnInit {
-
+  username = '';
+  allowButton = false;
   constructor() { }
 
   ngOnInit() {
   }
-
+  buttonEnable() {
+    if(this.username != ''){
+      this.allowButton = true;
+    }
+  }
 }
