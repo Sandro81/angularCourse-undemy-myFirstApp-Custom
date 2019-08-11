@@ -251,10 +251,12 @@
 
 <hr>
 <h3>Lesson 35 -> Using ngIf to Output Data Conditionally</h3>
-<p>The ngIf directive allow to add or remove from the HTML structure the elements content in it </p>
-<p>ngIf changes the structure of our DOM</p>
+<p>The ngIf directive allow to add or remove from the HTML structure the elements content in it, ngIf changes the structure of our DOM</p>
+
 <ul>
-<li></li>
+  <li>The sintax is *ngIf="number > 100"</li>
+  <li>If you put the ngIf into an element, that element will be the border of the directive, in this case <br><code>&#60;div *ngIf="number > 100"> Content div &#60;/div></code></li>
+<li>Choose a number between 0 and 100. If the number is > 100 there will be spot an error</li>
 </ul>
 <app-l35-directive-ngif-output></app-l35-directive-ngif-output>
 <router-outlet></router-outlet>

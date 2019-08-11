@@ -2,8 +2,7 @@
 <form>
   <div class="form-row align-items-center">
     <div class="col-sm-12 my-1">
-      <p>Choose a number between 0 and 100</p>
-      <p>If the number is > 100 there will be spot an error</p>
+
       <div *ngIf="number > 100" class="alert alert-warning" role="alert">
         Warning! The {{number}} is > than 100.
       </div>
