@@ -1,0 +1,30 @@
+
+<form>
+  <div class="form-row align-items-center">
+    <div class="col-sm-12 my-1">
+
+      <div *ngIf="number > 100" class="alert alert-warning" role="alert">
+        Warning! The {{number}} is > than 100.
+      </div>
+      <label class="sr-only" for="l35">l35</label>
+      <input type="number"
+             class="form-control"
+             id="l35"
+             placeholder=""
+             name="l35"
+             min="0"
+             max="1000"
+             [(ngModel)]="number">
+    </div>
+
+
+  </div>
+  <button
+    type="submit"
+    class="btn btn-success"
+    [disabled]="username === ''"
+    (click)="username = ''">Submit</button>
+
+</form>
+<p ></p>
+
