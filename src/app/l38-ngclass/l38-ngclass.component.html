@@ -1,0 +1,22 @@
+
+<form>
+  <div class="form-row align-items-center">
+    <div class="col-sm-12 my-1">
+
+      <div [ngClass]="{highContrastClass: highContrast === true}"
+           [ngStyle]="{backgroundColor: getColor()}"
+           style=" border-style: solid; border-width: 2px; height: 100px; padding: 50px;"
+      >'rgb('{{randomNumberA}}', '{{randomNumberB}}', '{{randomNumberC}}')';</div>
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="highContrast = true;">Change Color</button>
+    </div>
+
+
+  </div>
+
+
+</form>
+<p ></p>
+
