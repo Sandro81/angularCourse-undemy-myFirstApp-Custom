@@ -13,6 +13,7 @@ import { L29DataEventComponent } from './l29-data-event/l29-data-event.component
 import { L30TwoWayDatabindingComponent } from './l30-two-way-databinding/l30-two-way-databinding.component';
 import { L33AssignmentComponent } from './l33-assignment/l33-assignment.component';
 import { L35DirectiveNgifOutputComponent } from './l35-directive-ngif-output/l35-directive-ngif-output.component';
+import { L36DirectiveNgifElseComponent } from './l36-directive-ngif-else/l36-directive-ngif-else.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { L35DirectiveNgifOutputComponent } from './l35-directive-ngif-output/l35
     L29DataEventComponent,
     L30TwoWayDatabindingComponent,
     L33AssignmentComponent,
-    L35DirectiveNgifOutputComponent
+    L35DirectiveNgifOutputComponent,
+    L36DirectiveNgifElseComponent
   ],
   imports: [
     BrowserModule,
