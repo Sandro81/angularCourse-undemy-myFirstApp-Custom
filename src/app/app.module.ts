@@ -16,6 +16,7 @@ import { L35DirectiveNgifOutputComponent } from './l35-directive-ngif-output/l35
 import { L36DirectiveNgifElseComponent } from './l36-directive-ngif-else/l36-directive-ngif-else.component';
 import { L37NgstyleComponent } from './l37-ngstyle/l37-ngstyle.component';
 import { L38NgclassComponent } from './l38-ngclass/l38-ngclass.component';
+import { L39NgforComponent } from './l39-ngfor/l39-ngfor.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { L38NgclassComponent } from './l38-ngclass/l38-ngclass.component';
     L35DirectiveNgifOutputComponent,
     L36DirectiveNgifElseComponent,
     L37NgstyleComponent,
-    L38NgclassComponent
+    L38NgclassComponent,
+    L39NgforComponent
   ],
   imports: [
     BrowserModule,
