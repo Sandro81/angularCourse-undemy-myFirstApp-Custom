@@ -254,7 +254,7 @@
 <p>The ngIf directive allow to add or remove from the HTML structure the elements content in it, ngIf changes the structure of our DOM</p>
 
 <ul>
-  <li>The sintax is *ngIf="number > 100"</li>
+  <li>The syntax is *ngIf="number > 100"</li>
   <li>If you put the ngIf into an element, that element will be the border of the directive, in this case <br><code>&#60;div *ngIf="number > 100"> Content div &#60;/div></code></li>
 <li>Choose a number between 0 and 100. If the number is > 100 there will be spot an error</li>
 </ul>
@@ -264,9 +264,10 @@
 <p>If you need to add another condition as if else directive, it is possible usinge the *ngIf="condition; else otherCondition"</p>
 
 <ul>
-  <li>The sintax is *ngIf="number > 100"</li>
-  <li>If you put the ngIf into an element, that element will be the border of the directive, in this case <br><code>&#60;div *ngIf="number > 100"> Content div &#60;/div></code></li>
-  <li>Choose a number between 0 and 100. If the number is > 100 there will be spot an error</li>
+  <li>The else syntax is *ngIf="number > 100; else numberIsOk"</li>
+  <li>The <b>numberIsOk</b> it is a <b>local reference</b> that it is possible to associate like <code>&#60;ng-template <b>#numberIsOk</b>></code></li>
+  <li>The local reference with the character <b>#</b> becomes a <b>marker</b> that enable the ng-template content.</li>
+  <li>Choose a number between 0 and 100. If the number is > 100 there will be spot an error, else if number <= 100 there will be spot a success message.</li>
 </ul>
 <app-l36-directive-ngif-else></app-l36-directive-ngif-else>
 <router-outlet></router-outlet>
