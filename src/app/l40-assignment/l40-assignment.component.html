@@ -3,3 +3,9 @@
   class="btn btn-success"
   (click)="pustButton()">Display Details</button>
 <p *ngIf="paragraf === true">Secret Password = tuna</p>
+
+<ol>
+    <li *ngFor="let log of logArray let i = index" [ngClass]="{backBefore5: i > 5}">
+      {{log}}
+    </li>
+</ol>
