@@ -1,0 +1,27 @@
+
+<form>
+  <div class="form-row align-items-center">
+    <div class="col-sm-12 my-1">
+
+      <div *ngIf="number > 100; else numberIsOk" class="alert alert-warning" role="alert">
+        Warning! The number {{number}} is <b>greater</b> than 100.
+      </div>
+      <ng-template #numberIsOk>
+        <div class="alert alert-success" role="alert">
+          Success! The number {{number}} is <b>lesser or equal </b> to 100.
+        </div>
+      </ng-template>
+      <label class="sr-only" for="l35">l35</label>
+      <input type="number"
+             class="form-control"
+             id="l35"
+             placeholder=""
+             name="l35"
+             min="0"
+             max="1000"
+             [(ngModel)]="number">
+    </div>
+  </div>
+</form>
+<p ></p>
+
