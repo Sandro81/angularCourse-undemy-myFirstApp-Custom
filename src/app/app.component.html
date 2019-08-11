@@ -282,12 +282,12 @@
 
 <hr>
 <h3>Lesson 38 -> Applying CSS Classes Dynamically with ngClass</h3>
-<p>With ngStyle we are able to dynamically update the style of the element</p>
+<p>With ngClass we are able to dynamically update the class of the element</p>
 <ul>
-  <li>For this example I create three random color that together can give a background color to the div.</li>
-  <li>The ngStyle will execute the getColor() function that will return the color value <code>[ngStyle]="&#123;backgroundColor: getColor()}"</code></li>
-  <li>The ngStyle will add the new style without overlapping</li>
+  <li>Syntax <code>[ngClass]="&#123;highContrastClass: highContrast === true}"</code></li>
+  <li>"highContrastClass" is the class content in the component.css file</li>
+  <li>"highContrast === true" is the condition that will apply the "highContrastClass" class to the elements </li>
+  <li>Important to notice, the class doesn't overlap the pre-existent style value</li>
 </ul>
 <app-l38-ngclass></app-l38-ngclass>
 <router-outlet></router-outlet>
-ss
