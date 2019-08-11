@@ -11,8 +11,11 @@
              name="l35"
              min="0"
              max="1000"
-             [(ngModel)]="number" (input)="sendNumber()">
+             [(ngModel)]="number">
     </div>
   </div>
 </form>
-<p>{{number}}</p>
+<p ></p>
+<div *ngIf="number > 100" class="alert alert-warning" role="alert">
+  Warning! The {{number}} is > than 100.
+</div>
