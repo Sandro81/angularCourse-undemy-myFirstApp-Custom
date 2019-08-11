@@ -1,1 +1,18 @@
-<p>l35-directive-ngif-output works!</p>
+<form>
+  <div class="form-row align-items-center">
+    <div class="col-sm-3 my-1">
+      <p>Choose a number between 0 and 100</p>
+      <p>If the number is > 100 there will be spot an error</p>
+      <label class="sr-only" for="l35">l35</label>
+      <input type="number"
+             class="form-control"
+             id="l35"
+             placeholder=""
+             name="l35"
+             min="0"
+             max="1000"
+             [(ngModel)]="number" (input)="sendNumber()">
+    </div>
+  </div>
+</form>
+<p>{{number}}</p>
