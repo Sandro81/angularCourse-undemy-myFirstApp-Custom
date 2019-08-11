@@ -18,6 +18,13 @@ import { L37NgstyleComponent } from './l37-ngstyle/l37-ngstyle.component';
 import { L38NgclassComponent } from './l38-ngclass/l38-ngclass.component';
 import { L39NgforComponent } from './l39-ngfor/l39-ngfor.component';
 import { L40AssignmentComponent } from './l40-assignment/l40-assignment.component';
+import { HeaderComponent } from './recipe/header/header/header.component';
+import { RecipesComponent } from './recipe/recipes/recipes.component';
+import { RecipeListComponent } from './recipe/recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipe/recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipe/recipes/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './recipe/shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './recipe/shopping-list/shopping-edit/shopping-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +43,14 @@ import { L40AssignmentComponent } from './l40-assignment/l40-assignment.componen
     L37NgstyleComponent,
     L38NgclassComponent,
     L39NgforComponent,
-    L40AssignmentComponent
+    L40AssignmentComponent,
+    HeaderComponent,
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent
   ],
   imports: [
     BrowserModule,
