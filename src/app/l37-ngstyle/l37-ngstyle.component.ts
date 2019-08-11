@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class L37NgstyleComponent implements OnInit {
 
-  randomNumber: number =  Math.random();
+
+  multiplicator: number = 255;
+  randomNumberA: number =  this.randomFloorNumber(this.multiplicator);
+  randomNumberB: number =  this.randomFloorNumber(this.multiplicator);
+  randomNumberC: number =  this.randomFloorNumber(this.multiplicator);
 
   constructor() {
   }
@@ -15,4 +19,17 @@ export class L37NgstyleComponent implements OnInit {
   ngOnInit() {
   }
 
+  randomFloorNumber(multiplicator){
+    return Math.floor(Math.random() * multiplicator);
+  }
+
+  randomNumberFunction() {
+    this.randomNumberA =  this.randomFloorNumber(this.multiplicator);
+    this.randomNumberB =  this.randomFloorNumber(this.multiplicator);
+    this.randomNumberC =  this.randomFloorNumber(this.multiplicator);
+  }
+
+  getColor() {
+    return 'rgb('+this.randomNumberA+', '+this.randomNumberB+', '+this.randomNumberC+')';
+  }
 }
