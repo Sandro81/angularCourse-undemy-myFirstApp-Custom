@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'Udemy Course from 06 to 18 Custom';
   name = 'My first App';
   randomVariable = 'SandoR';
+
+  // Variable for the Section 5
+  serverElements = [];
+  // -------------------------
 }

@@ -194,7 +194,7 @@
   <li>
     To create a event button that is triggered by the user<br>
     add for example the <code>(click)="eventTriggered()"</code> that call the function eventTriggered()</li>
-<li>The function in this case will change the variable &#123; &#123; testEventBinding }}</li>
+  <li>The function in this case will change the variable &#123; &#123; testEventBinding }}</li>
 </ul>
 <app-l27-event-binding></app-l27-event-binding>
 
@@ -205,15 +205,15 @@
 <ul>
   <li>As for the click event, also for the input field it is possible to set the (input) event, passing the $event into the method called</li>
   <li><code>      &#60;input type="text"<br>
-                         class="form-control"<br>
-                         id="inlineFormInputName"<br>
-                         placeholder="Type something"<br>
+    class="form-control"<br>
+    id="inlineFormInputName"<br>
+    placeholder="Type something"<br>
     <b>(input)="onUpdateName($event)"</b>></code></li>
   <li>In the Component side:<br>
-   <code> onUpdateName(event: Event)&#123;<br>
-    this.eventText = (&#60;HTMLInputElement>event.target).value;<br>
-    }<br>
-   </code>
+    <code> onUpdateName(event: Event)&#123;<br>
+      this.eventText = (&#60;HTMLInputElement>event.target).value;<br>
+      }<br>
+    </code>
   </li>
   <li>It is mandatory to explicity declare the event with the formula (&#60;HTMLInputElement>event.target).value;</li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement" target="_blank">HTMLInputElement</a>
@@ -256,7 +256,7 @@
 <ul>
   <li>The syntax is *ngIf="number > 100"</li>
   <li>If you put the ngIf into an element, that element will be the border of the directive, in this case <br><code>&#60;div *ngIf="number > 100"> Content div &#60;/div></code></li>
-<li>Choose a number between 0 and 100. If the number is > 100 there will be spot an error</li>
+  <li>Choose a number between 0 and 100. If the number is > 100 there will be spot an error</li>
 </ul>
 <app-l35-directive-ngif-output></app-l35-directive-ngif-output>
 <hr>
@@ -328,3 +328,37 @@
     </div>
   </div>
 </div>
+
+
+<hr>
+<h3>Section 5 -> Components & Databinding Deep Dive</h3>
+<hr>
+<div class="container">
+
+  <app-cockpit></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element *ngFor="let serverElement of serverElements"></app-server-element>
+    </div>
+  </div>
+</div>
+
+
+
+
+<hr>
+<h3>Lesson 68 -> Binding to Custom Properties</h3>
+<p>Trying to access to the an element that are coming from another component</p>
+<ul>
+  <li>For example into section5/server-element.component.ts:<br>
+    <code>&#60;strong *ngIf="element.type === 'server'" style="color: red">&#123; &#123; element.content }}&#60;/strong><br>
+      &#60;em *ngIf="element.type === 'blueprint'">&#123; &#123; element.content }}&#60;/em></code></li>
+  <li>create into the component.ts the property that represent the object that we need in our component, in this case "element" </li>
+
+  <li>Syntax <code>[ngClass]="&#123;highContrastClass: highContrast === true}"</code></li>
+  <li>"highContrastClass" is the class content in the component.css file</li>
+  <li>"highContrast === true" is the condition that will apply the "highContrastClass" class to the elements </li>
+  <li>Important to notice, the class doesn't overlap the pre-existent style value</li>
+</ul>
+<app-l38-ngclass></app-l38-ngclass>
