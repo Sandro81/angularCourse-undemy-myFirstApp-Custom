@@ -11,6 +11,6 @@ export class AppComponent {
   randomVariable = 'SandoR';
 
   // Variable for the Section 5
-  serverElements = [];
+  serverElements = [{type: 'server', name:'TestServer', content: 'Just a Test!'}];
   // -------------------------
 }

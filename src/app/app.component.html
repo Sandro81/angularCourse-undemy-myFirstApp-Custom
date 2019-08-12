@@ -354,7 +354,14 @@
   <li>For example into section5/server-element.component.ts:<br>
     <code>&#60;strong *ngIf="element.type === 'server'" style="color: red">&#123; &#123; element.content }}&#60;/strong><br>
       &#60;em *ngIf="element.type === 'blueprint'">&#123; &#123; element.content }}&#60;/em></code></li>
-  <li>create into the component.ts the property that represent the object that we need in our component, in this case "element" </li>
+  <li>create into the component.ts the property that represent the object that we need in our component, in this case "element":<br>
+  <code>element: &#123; type: string, name: string, content: string};</code><br>
+  that are all now out <i>type definition</i></li>
+<li>Outside of this component, it will be the object data with the data that we have to pass into the previous component:
+  <br><code>  serverElements = [&#123type: 'server', name:'TestServer', content: 'Just a Test!'}];</code></li>
+
+
+
 
   <li>Syntax <code>[ngClass]="&#123;highContrastClass: highContrast === true}"</code></li>
   <li>"highContrastClass" is the class content in the component.css file</li>
