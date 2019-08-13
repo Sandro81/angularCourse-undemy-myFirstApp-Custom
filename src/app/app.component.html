@@ -339,7 +339,7 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-server-element *ngFor="let serverElement of serverElements"></app-server-element>
+      <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElements"></app-server-element>
     </div>
   </div>
 </div>
@@ -348,24 +348,18 @@
 
 
 <hr>
-<h3>Lesson 68 -> Binding to Custom Properties</h3>
+<h3>Lesson 68 -> Binding to Custom Properties -> @Input() </h3>
 <p>Trying to access to the an element that are coming from another component</p>
+<p>To have access to the component property from outside of the component, the component needs the Decorator @Input()</p>
 <ul>
   <li>For example into section5/server-element.component.ts:<br>
     <code>&#60;strong *ngIf="element.type === 'server'" style="color: red">&#123; &#123; element.content }}&#60;/strong><br>
       &#60;em *ngIf="element.type === 'blueprint'">&#123; &#123; element.content }}&#60;/em></code></li>
-  <li>create into the component.ts the property that represent the object that we need in our component, in this case "element":<br>
-  <code>element: &#123; type: string, name: string, content: string};</code><br>
+  <li>create into the component.ts the property that represent the object that we need in our component using the @Input decorator, in this case "element":<br>
+  <code>@Input() element: &#123; type: string, name: string, content: string};</code><br>
   that are all now out <i>type definition</i></li>
-<li>Outside of this component, it will be the object data with the data that we have to pass into the previous component:
-  <br><code>  serverElements = [&#123type: 'server', name:'TestServer', content: 'Just a Test!'}];</code></li>
+<li>Outside of this component, it will be the object data with the data that we have to pass into the previous component
+  <br><code> serverElements = [&#123;type: 'server', name:'TestServer', content: 'Just a Test!'}];</code></li>
+  <li>To access to the new component from outside: <br>
+    <code>&#60;app-server-element [element]="serverElements">&#60;/app-server-element></code></li>
 
-
-
-
-  <li>Syntax <code>[ngClass]="&#123;highContrastClass: highContrast === true}"</code></li>
-  <li>"highContrastClass" is the class content in the component.css file</li>
-  <li>"highContrast === true" is the condition that will apply the "highContrastClass" class to the elements </li>
-  <li>Important to notice, the class doesn't overlap the pre-existent style value</li>
-</ul>
-<app-l38-ngclass></app-l38-ngclass>
