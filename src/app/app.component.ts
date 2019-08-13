@@ -17,19 +17,19 @@ export class AppComponent {
 
 
 // Those two method are created for cockpit component ------------
-  onAddServer() {
+  onAddServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
       type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent
+      name: serverData.serverName,
+      content: serverData.serverName
     });
   }
 
-  onAddBlueprint() {
+  onBlueprintAdded(bluePrintData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
       type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent
+      name: bluePrintData.serverName,
+      content: bluePrintData.serverName
     });
   }
   // -------------- End cockpit component

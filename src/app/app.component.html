@@ -335,7 +335,10 @@
 <hr>
 <div class="container">
 
-  <app-cockpit></app-cockpit>
+  <app-cockpit
+    (serverCreated)="onAddServerAdded($event)"
+    (bluePrintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
   <hr>
   <div class="row">
     <div class="col-xs-12">
@@ -350,16 +353,17 @@
 <hr>
 <h3>Lesson 65 -> Binding to Custom Properties -> @Input() </h3>
 <p>Trying to access to the an element that are coming from another component</p>
-<p>To have access to the component property from outside of the component, the component needs the Decorator @Input()</p>
+<p>To have access to the component properties from outside of the component, the component needs the Decorator @Input()</p>
+<p>So the Input() decorator allow from outside to pass data inside. @Input() makes a property bindlable from outside.</p>
 <ul>
   <li>For example into section5/server-element.component.ts:<br>
     <code>&#60;strong *ngIf="element.type === 'server'" style="color: red">&#123; &#123; element.content }}&#60;/strong><br>
       &#60;em *ngIf="element.type === 'blueprint'">&#123; &#123; element.content }}&#60;/em></code></li>
   <li>create into the component.ts the property that represent the object that we need in our component using the @Input decorator, in this case "element":<br>
-  <code>@Input() element: &#123; type: string, name: string, content: string};</code><br>
-  that are all now out <i>type definition</i></li>
-<li>Outside of this component, it will be the object data with the data that we have to pass into the previous component
-  <br><code> serverElements = [&#123;type: 'server', name:'TestServer', content: 'Just a Test!'}];</code></li>
+    <code>@Input() element: &#123; type: string, name: string, content: string};</code><br>
+    that are all now out <i>type definition</i></li>
+  <li>Outside of this component, it will be the object data with the data that we have to pass into the previous component
+    <br><code> serverElements = [&#123;type: 'server', name:'TestServer', content: 'Just a Test!'}];</code></li>
   <li>To access to the new component from outside: <br>
     <code>&#60;app-server-element [element]="serverElements">&#60;/app-server-element></code></li>
   <hr>
@@ -367,11 +371,34 @@
   <p>It is possible to assign an Alias to the @Input() Decorator like <code>@Input('Alias')</code></p>
   <ul>
     <li>
-    <code>@Input('srvElement') element: &#123; type: string, name: string, content: string};</code>
-  </li>
-  <li>
-    <code>&#60;app-server-element [srvElement]="serverElements">&#60;/app-server-element></code>
-  </li>
+      <code>@Input('srvElement') element: &#123; type: string, name: string, content: string};</code>
+    </li>
+    <li>
+      <code>&#60;app-server-element [srvElement]="serverElements">&#60;/app-server-element></code>
+    </li>
   </ul>
   <hr>
-  <h3>Lesson 65 -> Binding to Custom Events -> @Output() </h3>
+  <h3>Lesson 65 -> Binding to Custom Events -> @Output() -> EventEmitter</h3>
+  <ul>
+    <li>
+      To send outside data or event outside to the components, we have to use the EventEmitter object. <br>
+      With EventEmitter object, now we get two event emitters and that's the first step, eventEmit
+      <code>serverCreated = new EventEmitter<&#123;serverName: string, serverContent: string}>(); <br>
+        blueprintCreated = new EventEmitter<&#123;serverName: string, serverContent: string}>();</code>
+    </li>
+    <li>Then we need we need two method that will called the serverCreated and the blueprintCreated with the emit() method. This will emit a new event of this type so of the server created using this evetEmitter<br>
+      <code>onAddServer()&#123;<br>
+      this.serverCreated.emit(&#123;<br>
+      serverName: this.newServerName,<br>
+      serverContent: this.newServerContent<br>
+      });<br>
+      }<br>
+      <br>
+      onAddBlueprint()&#123;<br>
+      this.blueprintCreated.emit(&#123;<br>
+      serverName: this.newServerName,<br>
+      serverContent: this.newServerContent<br>
+      });<br>
+      }</code></li>
+    <li>To make blueprintCreated and serverCreated listenable from outside we have to use the @Output decorator</li>
+  </ul>
