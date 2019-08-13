@@ -334,15 +334,17 @@
 <h3>Section 5 -> Components & Databinding Deep Dive</h3>
 <hr>
 <div class="container">
-
   <app-cockpit
     (serverCreated)="onAddServerAdded($event)"
-    (bluePrintCreated)="onBlueprintAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
   ></app-cockpit>
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElements"></app-server-element>
+      <app-server-element
+        *ngFor="let serverElement of serverElements"
+        [srvElement]="serverElement">
+      </app-server-element>
     </div>
   </div>
 </div>
@@ -388,17 +390,17 @@
     </li>
     <li>Then we need we need two method that will called the serverCreated and the blueprintCreated with the emit() method. This will emit a new event of this type so of the server created using this evetEmitter<br>
       <code>onAddServer()&#123;<br>
-      this.serverCreated.emit(&#123;<br>
-      serverName: this.newServerName,<br>
-      serverContent: this.newServerContent<br>
-      });<br>
-      }<br>
-      <br>
-      onAddBlueprint()&#123;<br>
-      this.blueprintCreated.emit(&#123;<br>
-      serverName: this.newServerName,<br>
-      serverContent: this.newServerContent<br>
-      });<br>
-      }</code></li>
+        this.serverCreated.emit(&#123;<br>
+        serverName: this.newServerName,<br>
+        serverContent: this.newServerContent<br>
+        });<br>
+        }<br>
+        <br>
+        onAddBlueprint()&#123;<br>
+        this.blueprintCreated.emit(&#123;<br>
+        serverName: this.newServerName,<br>
+        serverContent: this.newServerContent<br>
+        });<br>
+        }</code></li>
     <li>To make blueprintCreated and serverCreated listenable from outside we have to use the @Output decorator</li>
   </ul>

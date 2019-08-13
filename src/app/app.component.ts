@@ -23,6 +23,7 @@ export class AppComponent {
       name: serverData.serverName,
       content: serverData.serverName
     });
+    console.log(this.serverElements);
   }
 
   onBlueprintAdded(bluePrintData: {serverName: string, serverContent: string}) {
