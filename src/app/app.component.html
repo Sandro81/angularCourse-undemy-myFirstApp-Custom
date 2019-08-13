@@ -339,7 +339,7 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElements"></app-server-element>
+      <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElements"></app-server-element>
     </div>
   </div>
 </div>
@@ -348,7 +348,7 @@
 
 
 <hr>
-<h3>Lesson 68 -> Binding to Custom Properties -> @Input() </h3>
+<h3>Lesson 65 -> Binding to Custom Properties -> @Input() </h3>
 <p>Trying to access to the an element that are coming from another component</p>
 <p>To have access to the component property from outside of the component, the component needs the Decorator @Input()</p>
 <ul>
@@ -362,4 +362,16 @@
   <br><code> serverElements = [&#123;type: 'server', name:'TestServer', content: 'Just a Test!'}];</code></li>
   <li>To access to the new component from outside: <br>
     <code>&#60;app-server-element [element]="serverElements">&#60;/app-server-element></code></li>
-
+  <hr>
+  <h3>Lesson 66 -> Assigning an Alias to Custom Properties -> @Input('alias')</h3>
+  <p>It is possible to assign an Alias to the @Input() Decorator like <code>@Input('Alias')</code></p>
+  <ul>
+    <li>
+    <code>@Input('srvElement') element: &#123; type: string, name: string, content: string};</code>
+  </li>
+  <li>
+    <code>&#60;app-server-element [srvElement]="serverElements">&#60;/app-server-element></code>
+  </li>
+  </ul>
+  <hr>
+  <h3>Lesson 65 -> Binding to Custom Properties -> @Input() </h3>
