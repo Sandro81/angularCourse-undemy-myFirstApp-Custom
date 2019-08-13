@@ -13,4 +13,24 @@ export class AppComponent {
   // Variable for the Section 5
   serverElements = [{type: 'server', name:'TestServer', content: 'Just a Test!'}];
   // -------------------------
+
+
+
+// Those two method are created for cockpit component ------------
+  onAddServer() {
+    this.serverElements.push({
+      type: 'server',
+      name: this.newServerName,
+      content: this.newServerContent
+    });
+  }
+
+  onAddBlueprint() {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: this.newServerName,
+      content: this.newServerContent
+    });
+  }
+  // -------------- End cockpit component
 }
