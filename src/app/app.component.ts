@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,11 @@ export class AppComponent {
 
 
   // Lesson 74
-  @ViewChild('reference74') reference74;
+  @ViewChild('reference74', {static: true}) reference74: ElementRef;
+  clickOnButton($event){
+    console.log(this.reference74.nativeElement.value);
+  }
+ // reference74Out = this.reference74.nativeElement.value;
   //----------
 
 

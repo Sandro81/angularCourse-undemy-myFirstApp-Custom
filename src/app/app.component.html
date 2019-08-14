@@ -443,15 +443,20 @@ This is the Type of the Input above -> {{serverNameInput.type}}
 <br>
 <hr>
 <h3>Lesson 74 -> Getting Access to the Template & DOM with @ViewChild</h3>
-<p>To get access to the local reference from the component.ts we have to use the @ViewChild() Decorator</p>
+<p>To get access to the local reference from the component.ts we have to use the <a href="https://angular.io/api/core/ViewChild">@ViewChild()</a> Decorator</p>
 <p>If for example with want to use the input with the local reference '#reference74': </p>
 <p><code>&#60;input type="text"    <br>
   class="form-control"<br>
   <b>#reference74</b>></code></p>
 <p>and in the component.ts we will add the @ViewChild decorator declaring the reference as a "ElementRef" object like:</p>
-<p><code><b>@ViewChild('reference74') reference74;</b></code></p>
-
-
+<p><code><b>@ViewChild('reference74', &#123;static: true}) reference7: ElementRef;</b></code></p>
+<p>Whith Angular 8, the @ViewChild() should be @ViewChild('...',  &#123;static: true}) SINCE  we'll also use thte selected element in ngOnInit</p>
+<input type="text"
+       class="form-control"
+       #reference74
+       placeholder="Qualcosa">
+<button class="btn btn-primary" (click)="clickOnButton(reference74)">Add Server</button>
+<B></B>
 
 
 
