@@ -17,8 +17,10 @@ export class AppComponent {
 
   // Lesson 74
   @ViewChild('reference74', {static: true}) reference74: ElementRef;
+  reference74Out = '';
   clickOnButton($event){
     console.log(this.reference74.nativeElement.value);
+    this.reference74Out = this.reference74.nativeElement.value;
   }
  // reference74Out = this.reference74.nativeElement.value;
   //----------

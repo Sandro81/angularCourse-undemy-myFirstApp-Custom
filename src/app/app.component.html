@@ -455,8 +455,11 @@ This is the Type of the Input above -> {{serverNameInput.type}}
        class="form-control"
        #reference74
        placeholder="Qualcosa">
-<button class="btn btn-primary" (click)="clickOnButton(reference74)">Add Server</button>
-<B></B>
-
-
+<button class="btn btn-primary" (click)="clickOnButton(reference74)">Send the reference</button><br>
+<B>{{reference74Out}}</B>
+<p>We can finally access to the reference from the TypeScript passing the value as a properties into method:</p>
+<p><code>clickOnButton(reference74)</code></p>
+<p>To get access to the properties of the element, we have to use the "natvieElement" method:</p>
+<p><code>console.log(this.reference74.nativeElement.value);</code></p>
+<p>So without two way binding, we already send the data using a reference throught a method accessing to the Typescript, and then loop back with a variable using a String Interpolation</p>
 
