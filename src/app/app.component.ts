@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,10 @@ export class AppComponent {
   serverElements = [{type: 'server', name:'TestServer', content: 'Just a Test!'}];
   // -------------------------
 
+
+  // Lesson 74
+  @ViewChild('reference74') reference74;
+  //----------
 
 
 // Those two method are created for cockpit component ------------
