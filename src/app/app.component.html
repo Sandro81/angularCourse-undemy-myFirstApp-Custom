@@ -417,9 +417,30 @@
     @Component(&#123; <br>
     encapsulation: ViewEncapsulation.(method)<br>
     })
-  </li>
-</ul>
+  </li></ul>
 <p>Methods:</p>
   <ol>
-    <li></li>
+    <li><code>encapsulation: ViewEncapsulation.<b>Emulated</b></code><br>The default way to use the CSS encapsulated into the methods.</li>
+    <li><code>encapsulation: ViewEncapsulation.<b>None</b></code><br>The none methods will be disable the CSS of the component.</li>
+    <li><code>encapsulation: ViewEncapsulation.<b>Native</b></code><br>Native uses the shadow DOM technology. This should give you the same result as before with emulated but only in browsers which support it which is why for most cases, you want to choose emulated but be aware that you could switch to none or native </li>
   </ol>
+
+<h3>Lesson 72 -> Using Local References in Templates</h3>
+
+<p>A local reference is another option to use instead to use the two-way binding.</p>
+<p>A local rederence can be placed on any HTML element, so not only on an input element, on anything you see here in the template and you add with a ashtag # and then a name of your choice, like for example server name since this is what reference will hold, a reference to this element like:</p>
+<p><code>&#60;input type="text"    <br>
+                class="form-control"<br>
+                <b>#serverNameInput</b>></code></p>
+<p>Now important, this reference will hold a reference to this element, so not to the value we entered there, to the whole HTML element with all its properties.</p>
+<p>You can create and yse them evertwgere in your template but importat, only there, not inside your TypeScript code, only in the template.</p>
+<input type="text"
+class="form-control"
+#serverNameInput
+placeholder="Qualcosa">
+This is the Placeholder of the Input above -> {{serverNameInput.placeholder}} <br>
+This is the Type of the Input above -> {{serverNameInput.type}}
+<br>
+
+
+
