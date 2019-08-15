@@ -479,9 +479,13 @@ This is the Type of the Input above -> {{serverNameInput.type}}
     &#60;/app-l75-ngcomponent></code></li>
 </ul>
 status 75 is -> {{status75}}
-<button class="btn btn-primary" (click)="!status75">Send the reference</button>
+<button class="btn btn-primary" (click)="changeStatus75()">Change Status</button>
 <app-l75-ngcomponent>
   <p *ngIf="status75 == false"> status is NOT ok </p>
   <p *ngIf="status75 == true"> status is OK </p>
 </app-l75-ngcomponent>
 
+<hr>
+<h3>Lesson 76 -> Understanding the Component Lifecycle</h3>
+
+<p>If a new component is created in Angular and of course Angular is responsible for creating these components when it finds one of our selectors for example, it will instantiate a new version of that component and add it into the DOM. So once a new component is instantiated, Angular goes through a couple of different phases in this creation process and it will actually give us a chance to hook into these phases and execute some code.</p>

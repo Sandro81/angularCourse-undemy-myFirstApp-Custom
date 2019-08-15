@@ -28,6 +28,10 @@ export class AppComponent {
   // Lesson 75 -> Projecting Content into Components with ng-content
   status75: boolean = false;
 
+  changeStatus75(){
+    this.status75 = !this.status75;
+  }
+
   //-----------------------------------------
 
 
