@@ -469,11 +469,13 @@ This is the Type of the Input above -> {{serverNameInput.type}}
 <p>Sometimes you have complex HTML code like:</p>
 <p>    <code>&#60;strong *ngIf="element.type === 'server'" style="color: red">&#123; &#123; element.content }}&#60;/strong><br>
   &#60;em *ngIf="element.type === 'blueprint'">&#123; &#123; element.content }}&#60;/em></code></p>
-<p>And if you want to pass those information into a component from outside</p>
+<p>And if you want to pass those information into a component from outside it is possible to use the :ng-content". </p>
 <ul>
-  <li>
-  </li>
+  <li>If for example we take the code above and we want to pass that code into the template component <code> &#60;app-l75-ngcomponent>&#60;/app-l75-ngcomponent></code><br>
+  It is possible to write something like: <br>
+  <code>&#60;app-l75-ngcomponent> <br>
+    &#60;p *ngIf="status75 == false"> status is NOT ok &#60;/p> <br>
+    &#60;p *ngIf="status75 == true"> status is OK &#60;/p> <br>
+    &#60;/app-l75-ngcomponent></code></li>
 </ul>
 
-
-3:22 lesson 75
