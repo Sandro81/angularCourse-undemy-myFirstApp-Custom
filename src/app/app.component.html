@@ -478,4 +478,10 @@ This is the Type of the Input above -> {{serverNameInput.type}}
     &#60;p *ngIf="status75 == true"> status is OK &#60;/p> <br>
     &#60;/app-l75-ngcomponent></code></li>
 </ul>
+status 75 is -> {{status75}}
+<button class="btn btn-primary" (click)="!status75">Send the reference</button>
+<app-l75-ngcomponent>
+  <p *ngIf="status75 == false"> status is NOT ok </p>
+  <p *ngIf="status75 == true"> status is OK </p>
+</app-l75-ngcomponent>
 

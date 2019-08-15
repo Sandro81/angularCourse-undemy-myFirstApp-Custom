@@ -25,6 +25,11 @@ export class AppComponent {
  // reference74Out = this.reference74.nativeElement.value;
   //----------
 
+  // Lesson 75 -> Projecting Content into Components with ng-content
+  status75: boolean = false;
+
+  //-----------------------------------------
+
 
 // Those two method are created for cockpit component ------------
   onAddServerAdded(serverData: {serverName: string, serverContent: string}) {
