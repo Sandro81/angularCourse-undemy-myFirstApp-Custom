@@ -22,10 +22,12 @@ import {
 export class L77LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   @ViewChild('toDestroy' , {static: true}) toDestroy: ElementRef;
+  //@ContentChild('paragraph' , {static: true}) paragraph: ElementRef;
 
 
   varConstructor: string = '';
   varNgOnInit: string = '';
+  varCheckNgOnInit: string = '';
   varNgDocheck: string = '';
   varNgAfterContentInit: string = '';
   varAfterContentChecked: string = '';
@@ -69,11 +71,11 @@ export class L77LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterC
   }
 
   ngAfterViewInit() {
-    this.varAfterViewInit = Date.now() + ' -> ngAfterContentInit was called!';
+    //this.varAfterViewInit = Date.now() + ' -> ngAfterContentInit was called!';
   }
 
   ngAfterViewChecked() {
-    this.varOnDestroy = Date.now() + ' -> ngAfterContentInit was called!';
+    //this.varOnDestroy = Date.now() + ' -> ngAfterContentInit was called!';
   }
 
   ngOnDestroy() {
