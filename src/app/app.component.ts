@@ -78,5 +78,14 @@ export class AppComponent {
 
   //................
 
+  // Section 6
+
+
+  loadedFeature = 'recipe';
+
+  onNavigate(feature:string){
+    this.loadedFeature = feature;
+  }
+  //......................
 
 }
