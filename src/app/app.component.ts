@@ -64,8 +64,16 @@ export class AppComponent {
 // ......
 
  // Lesson 82 Assignment 4 ---->
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
+
   onItervalFired(firedNumber: number){
     console.log(firedNumber);
+    if(firedNumber % 2 === 0){
+      this.evenNumbers.push(firedNumber);
+    } else {
+      this.oddNumbers.push(firedNumber);
+    }
   }
 
   //................

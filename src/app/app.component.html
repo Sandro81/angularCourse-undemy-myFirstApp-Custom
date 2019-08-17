@@ -531,7 +531,15 @@ status 75 is -> {{status75}}
         <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
+
+      <p>Inportant function for this Assignment is the "setInterval()" and "clearInterval()"</p>
+      <p>The <b><a href="https://www.w3schools.com/jsref/met_win_setinterval.asp" target="_new">setInterval()</a> </b> method calls a function or evaluates an expression at specified intervals (in milliseconds).
+        <br>
+        The setInterval() method will continue calling the function until <a href="https://www.w3schools.com/jsref/met_win_clearinterval.asp" target="_blank"><b>setInterval()</b></a>  is called, or the window is closed.</p>
       <app-gamecontrol (intervalFired)="onItervalFired($event)"></app-gamecontrol>
+      <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+      <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
     </div>
   </div>
 </div>
+
