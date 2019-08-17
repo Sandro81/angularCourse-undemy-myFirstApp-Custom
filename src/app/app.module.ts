@@ -29,6 +29,10 @@ import { CockpitComponent } from './section5/cockpit/cockpit.component';
 import { ServerElementComponent } from './section5/server-element/server-element.component';
 import { L75NgcomponentComponent } from './lessons/l75-ngcomponent/l75-ngcomponent.component';
 import { L77LifecycleComponent } from './lessons/l77-lifecycle/l77-lifecycle.component';
+import { GamecontrolComponent } from './section5/assignment4/gamecontrol/gamecontrol.component';
+import { OddComponent } from './section5/assignment4/odd/odd.component';
+import { EventComponent } from './section5/assignment4/event/event.component';
+import { EvenComponent } from './section5/assignment4/even/even.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +62,11 @@ import { L77LifecycleComponent } from './lessons/l77-lifecycle/l77-lifecycle.com
     CockpitComponent,
     ServerElementComponent,
     L75NgcomponentComponent,
-    L77LifecycleComponent
+    L77LifecycleComponent,
+    GamecontrolComponent,
+    OddComponent,
+    EventComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
