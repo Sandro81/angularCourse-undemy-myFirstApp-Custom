@@ -53,4 +53,14 @@ export class AppComponent {
     });
   }
   // -------------- End cockpit component
+
+  // Lesson 77 --->
+  varTestChanges: number = 0;
+
+  incrementValue(){
+    this.varTestChanges++;
+  }
+
+// ......
+
 }

@@ -28,6 +28,7 @@ import { ShoppingEditComponent } from './recipe/shopping-list/shopping-edit/shop
 import { CockpitComponent } from './section5/cockpit/cockpit.component';
 import { ServerElementComponent } from './section5/server-element/server-element.component';
 import { L75NgcomponentComponent } from './lessons/l75-ngcomponent/l75-ngcomponent.component';
+import { L77LifecycleComponent } from './lessons/l77-lifecycle/l77-lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { L75NgcomponentComponent } from './lessons/l75-ngcomponent/l75-ngcompone
     ShoppingEditComponent,
     CockpitComponent,
     ServerElementComponent,
-    L75NgcomponentComponent
+    L75NgcomponentComponent,
+    L77LifecycleComponent
   ],
   imports: [
     BrowserModule,
