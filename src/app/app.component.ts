@@ -57,10 +57,10 @@ export class AppComponent {
   // Lesson 77 --->
   varTestChanges: number = 0;
 
+
   incrementValue(){
     this.varTestChanges++;
   }
-
 // ......
 
 }

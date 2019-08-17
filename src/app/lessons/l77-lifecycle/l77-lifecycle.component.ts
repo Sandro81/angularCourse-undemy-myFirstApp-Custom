@@ -80,7 +80,7 @@ export class L77LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterC
     this.varOnDestroy = Date.now() + ' -> ngAfterContentInit was called!';
   }
   onDestroyParagraph(){
-
+    this.toDestroy.nativeElement.remove();
   }
 
 }
