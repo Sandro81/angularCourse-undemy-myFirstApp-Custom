@@ -63,4 +63,12 @@ export class AppComponent {
   }
 // ......
 
+ // Lesson 82 Assignment 4 ---->
+  onItervalFired(firedNumber: number){
+    console.log(firedNumber);
+  }
+
+  //................
+
+
 }

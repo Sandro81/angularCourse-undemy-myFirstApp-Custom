@@ -31,7 +31,6 @@ import { L75NgcomponentComponent } from './lessons/l75-ngcomponent/l75-ngcompone
 import { L77LifecycleComponent } from './lessons/l77-lifecycle/l77-lifecycle.component';
 import { GamecontrolComponent } from './section5/assignment4/gamecontrol/gamecontrol.component';
 import { OddComponent } from './section5/assignment4/odd/odd.component';
-import { EventComponent } from './section5/assignment4/event/event.component';
 import { EvenComponent } from './section5/assignment4/even/even.component';
 
 @NgModule({
@@ -65,7 +64,6 @@ import { EvenComponent } from './section5/assignment4/even/even.component';
     L77LifecycleComponent,
     GamecontrolComponent,
     OddComponent,
-    EventComponent,
     EvenComponent
   ],
   imports: [
