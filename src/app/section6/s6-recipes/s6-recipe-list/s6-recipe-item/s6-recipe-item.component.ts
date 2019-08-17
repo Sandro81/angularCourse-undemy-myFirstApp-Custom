@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-s6-recipe-item',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class S6RecipeItemComponent implements OnInit {
 
+
+  @Input() recipe: { name: string, desc: string, imagePath: string};
   constructor() { }
 
   ngOnInit() {
