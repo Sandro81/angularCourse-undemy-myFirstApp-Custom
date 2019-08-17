@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {RecipeModel} from "./recipe.model";
 @Component({
   selector: 'app-s6-recipe-list',
@@ -6,6 +6,8 @@ import {RecipeModel} from "./recipe.model";
   styleUrls: ['./s6-recipe-list.component.css']
 })
 export class S6RecipeListComponent implements OnInit {
+
+  @Output() recipeWasSelected = new EventEmitter<RecipeModel>();
 
   // I'll use the RecipeModel as an array for store the information for all components
   recipes: RecipeModel[] = [
@@ -18,5 +20,13 @@ export class S6RecipeListComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
+  onRecipeSelected(recipe: RecipeModel){
+    // I want to use this property which now holds this event emitter as a value to emit an event whenever we click one of the buttons and I will then emit feature,
+    this.recipeWasSelected.emit(recipe);
+    console.log('index: '+recipe);
+  }
+
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RecipeModel} from "./s6-recipe-list/recipe.model";
 
 @Component({
   selector: 'app-s6-recipes',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./s6-recipes.component.css']
 })
 export class S6RecipesComponent implements OnInit {
+
+  selectedRecipe: RecipeModel;
 
   constructor() { }
 
