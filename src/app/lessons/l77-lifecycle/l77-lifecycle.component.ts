@@ -7,6 +7,11 @@ import {
   DoCheck,
   AfterContentInit,
   AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy,
+  ViewChild,
+  ElementRef
 } from '@angular/core';
 
 @Component({
@@ -14,13 +19,19 @@ import {
   templateUrl: './l77-lifecycle.component.html',
   styleUrls: ['./l77-lifecycle.component.css']
 })
-export class L77LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked {
+export class L77LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+
+  @ViewChild('toDestroy' , {static: true}) toDestroy: ElementRef;
+
 
   varConstructor: string = '';
   varNgOnInit: string = '';
   varNgDocheck: string = '';
   varNgAfterContentInit: string = '';
   varAfterContentChecked: string = '';
+  varAfterViewInit: string = '';
+  varAfterViewChecked: string = '';
+  varOnDestroy: string = '';
 
   // ngOnChanges Variables
   varNgOnChanges: string = '';
@@ -55,6 +66,21 @@ export class L77LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterC
 
   ngAfterContentChecked() {
     this.varAfterContentChecked = Date.now() + ' -> ngAfterContentInit was called!';
+  }
+
+  ngAfterViewInit() {
+    this.varAfterViewInit = Date.now() + ' -> ngAfterContentInit was called!';
+  }
+
+  ngAfterViewChecked() {
+    this.varOnDestroy = Date.now() + ' -> ngAfterContentInit was called!';
+  }
+
+  ngOnDestroy() {
+    this.varOnDestroy = Date.now() + ' -> ngAfterContentInit was called!';
+  }
+  onDestroyParagraph(){
+
   }
 
 }

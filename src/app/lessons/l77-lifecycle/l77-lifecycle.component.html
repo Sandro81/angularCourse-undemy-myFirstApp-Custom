@@ -42,17 +42,22 @@
 <h4>ngAfterViewInit</h4>
 <p>Called after the component’s view (and child views) has been initialized</p>
 <ul>
-  <li>{{varNgAfterContentInit}}</li>
+  <li>{{varAfterViewInit}}</li>
 </ul>
 
 <h4>ngAfterViewChecked</h4>
 <p>Called every time the view (and child views) have been checked</p>
 <ul>
-  <li>{{varNgAfterContentInit}}</li>
+  <li>{{varAfterViewChecked}}</li>
 </ul>
 
 <h4>ngOnDestroy</h4>
 <p>Called once the component is about to be destroyed</p>
+<button
+  type="button"
+  class="btn btn-outline-danger"
+  (click)="onDestroyParagraph()">Destroy</button>
 <ul>
   <li>{{varNgAfterContentInit}}</li>
 </ul>
+<p #toDestroy>end the existence of (something) by damaging or attacking it.</p>
