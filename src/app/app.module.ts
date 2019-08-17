@@ -38,6 +38,7 @@ import { S6RecipeDetailComponent } from './section6/s6-recipes/s6-recipe-detail/
 import { S6RecipeListComponent } from './section6/s6-recipes/s6-recipe-list/s6-recipe-list.component';
 import { S6ShoppingListComponent } from './section6/s6-shopping-list/s6-shopping-list.component';
 import { S6ShoppingEditComponent } from './section6/s6-shopping-list/s6-shopping-edit/s6-shopping-edit.component';
+import { S6RecipeItemComponent } from './section6/s6-recipes/s6-recipe-list/s6-recipe-item/s6-recipe-item.component';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { S6ShoppingEditComponent } from './section6/s6-shopping-list/s6-shopping
     S6RecipeListComponent,
     S6ShoppingListComponent,
     S6ShoppingEditComponent,
+    S6RecipeItemComponent,
   ],
   imports: [
     BrowserModule,
