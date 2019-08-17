@@ -4,12 +4,14 @@
   <li>{{varConstructor}}</li>
 </ul>
 
-<h4>OnInit</h4>
+<h4>ngOnInit</h4>
+<p>Called once the component is initialized</p>
 <ul>
   <li>{{varNgOnInit}}</li>
 </ul>
 
-<h4>OnChanges</h4>
+<h4>ngOnChanges</h4>
+<p>Called after a bound input property changes</p>
 <ul>
   <li>{{varNgOnChanges}}</li>
   <li>{{varNgOnChangesObjectFirstChange}}</li>
@@ -19,18 +21,38 @@
 </ul>
 
 
-<h4>varNgDocheck</h4>
+<h4>ngDoCheck</h4>
+<p>Called during every change detection run</p>
 <ul>
   <li>{{varNgDocheck}}</li>
 </ul>
 
-<h4>varNgAfterContentInit</h4>
+<h4>ngAfterContentInit</h4>
+<p>Called after content (ng-content) has been projected into view</p>
 <ul>
   <li>{{varNgAfterContentInit}}</li>
 </ul>
 
-<h4>varAfterContentChecked</h4>
+<h4>ngAfterContentChecked</h4>
+<p>Called every time the projected content has been checked</p>
 <ul>
   <li>{{varNgAfterContentInit}}</li>
 </ul>
 
+<h4>ngAfterViewInit</h4>
+<p>Called after the component’s view (and child views) has been initialized</p>
+<ul>
+  <li>{{varNgAfterContentInit}}</li>
+</ul>
+
+<h4>ngAfterViewChecked</h4>
+<p>Called every time the view (and child views) have been checked</p>
+<ul>
+  <li>{{varNgAfterContentInit}}</li>
+</ul>
+
+<h4>ngOnDestroy</h4>
+<p>Called once the component is about to be destroyed</p>
+<ul>
+  <li>{{varNgAfterContentInit}}</li>
+</ul>
