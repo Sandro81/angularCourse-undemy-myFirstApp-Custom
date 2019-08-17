@@ -32,6 +32,7 @@ import { L77LifecycleComponent } from './lessons/l77-lifecycle/l77-lifecycle.com
 import { GamecontrolComponent } from './section5/assignment4/gamecontrol/gamecontrol.component';
 import { OddComponent } from './section5/assignment4/odd/odd.component';
 import { EvenComponent } from './section5/assignment4/even/even.component';
+import { ShoppingLisComponent } from './section6/shopping-lis/shopping-lis.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { EvenComponent } from './section5/assignment4/even/even.component';
     L77LifecycleComponent,
     GamecontrolComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    ShoppingLisComponent
   ],
   imports: [
     BrowserModule,
