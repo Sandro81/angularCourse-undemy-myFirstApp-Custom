@@ -551,8 +551,8 @@ status 75 is -> {{status75}}
 <div class="container">
   <div class="row">
     <div class="col-xl-12">
-      <app-s6-recipes></app-s6-recipes>
-      <app-s6-shopping-list></app-s6-shopping-list>
+      <app-s6-recipes *ngIf="loadedFeature === 'recipe'"></app-s6-recipes>
+      <app-s6-shopping-list *ngIf=" loadedFeature !== 'recipe'"></app-s6-shopping-list>
     </div>
   </div>
 </div>
