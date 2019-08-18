@@ -369,42 +369,42 @@
   <li>To access to the new component from outside: <br>
     <code>&#60;app-server-element [element]="serverElements">&#60;/app-server-element></code></li>
 </ul>
-  <hr>
-  <h3>Lesson 66 -> Assigning an Alias to Custom Properties -> @Input('alias')</h3>
-  <p>It is possible to assign an Alias to the @Input() Decorator like <code>@Input('Alias')</code></p>
-  <ul>
-    <li>
-      <code>@Input('srvElement') element: &#123; type: string, name: string, content: string};</code>
-    </li>
-    <li>
-      <code>&#60;app-server-element [srvElement]="serverElements">&#60;/app-server-element></code>
-    </li>
-  </ul>
-  <hr>
-  <h3>Lesson 65 -> Binding to Custom Events -> @Output() -> EventEmitter</h3>
-  <ul>
-    <li>
-      To send outside data or event outside to the components, we have to use the EventEmitter object. <br>
-      With EventEmitter object, now we get two event emitters and that's the first step, eventEmit
-      <code>serverCreated = new EventEmitter<&#123;serverName: string, serverContent: string}>(); <br>
-        blueprintCreated = new EventEmitter<&#123;serverName: string, serverContent: string}>();</code>
-    </li>
-    <li>Then we need we need two method that will called the serverCreated and the blueprintCreated with the emit() method. This will emit a new event of this type so of the server created using this evetEmitter<br>
-      <code>onAddServer()&#123;<br>
-        this.serverCreated.emit(&#123;<br>
-        serverName: this.newServerName,<br>
-        serverContent: this.newServerContent<br>
-        });<br>
-        }<br>
-        <br>
-        onAddBlueprint()&#123;<br>
-        this.blueprintCreated.emit(&#123;<br>
-        serverName: this.newServerName,<br>
-        serverContent: this.newServerContent<br>
-        });<br>
-        }</code></li>
-    <li>To make blueprintCreated and serverCreated listenable from outside we have to use the @Output decorator</li>
-  </ul>
+<hr>
+<h3>Lesson 66 -> Assigning an Alias to Custom Properties -> @Input('alias')</h3>
+<p>It is possible to assign an Alias to the @Input() Decorator like <code>@Input('Alias')</code></p>
+<ul>
+  <li>
+    <code>@Input('srvElement') element: &#123; type: string, name: string, content: string};</code>
+  </li>
+  <li>
+    <code>&#60;app-server-element [srvElement]="serverElements">&#60;/app-server-element></code>
+  </li>
+</ul>
+<hr>
+<h3>Lesson 65 -> Binding to Custom Events -> @Output() -> EventEmitter</h3>
+<ul>
+  <li>
+    To send outside data or event outside to the components, we have to use the EventEmitter object. <br>
+    With EventEmitter object, now we get two event emitters and that's the first step, eventEmit
+    <code>serverCreated = new EventEmitter<&#123;serverName: string, serverContent: string}>(); <br>
+      blueprintCreated = new EventEmitter<&#123;serverName: string, serverContent: string}>();</code>
+  </li>
+  <li>Then we need we need two method that will called the serverCreated and the blueprintCreated with the emit() method. This will emit a new event of this type so of the server created using this evetEmitter<br>
+    <code>onAddServer()&#123;<br>
+      this.serverCreated.emit(&#123;<br>
+      serverName: this.newServerName,<br>
+      serverContent: this.newServerContent<br>
+      });<br>
+      }<br>
+      <br>
+      onAddBlueprint()&#123;<br>
+      this.blueprintCreated.emit(&#123;<br>
+      serverName: this.newServerName,<br>
+      serverContent: this.newServerContent<br>
+      });<br>
+      }</code></li>
+  <li>To make blueprintCreated and serverCreated listenable from outside we have to use the @Output decorator</li>
+</ul>
 
 
 <hr>
@@ -419,25 +419,25 @@
     })
   </li></ul>
 <p>Methods:</p>
-  <ol>
-    <li><code>encapsulation: ViewEncapsulation.<b>Emulated</b></code><br>The default way to use the CSS encapsulated into the methods.</li>
-    <li><code>encapsulation: ViewEncapsulation.<b>None</b></code><br>The none methods will be disable the CSS of the component.</li>
-    <li><code>encapsulation: ViewEncapsulation.<b>Native</b></code><br>Native uses the shadow DOM technology. This should give you the same result as before with emulated but only in browsers which support it which is why for most cases, you want to choose emulated but be aware that you could switch to none or native </li>
-  </ol>
+<ol>
+  <li><code>encapsulation: ViewEncapsulation.<b>Emulated</b></code><br>The default way to use the CSS encapsulated into the methods.</li>
+  <li><code>encapsulation: ViewEncapsulation.<b>None</b></code><br>The none methods will be disable the CSS of the component.</li>
+  <li><code>encapsulation: ViewEncapsulation.<b>Native</b></code><br>Native uses the shadow DOM technology. This should give you the same result as before with emulated but only in browsers which support it which is why for most cases, you want to choose emulated but be aware that you could switch to none or native </li>
+</ol>
 
 <h3>Lesson 72 -> Using Local References in Templates</h3>
 
 <p>A local reference is another option to use instead to use the two-way binding.</p>
 <p>A local rederence can be placed on any HTML element, so not only on an input element, on anything you see here in the template and you add with a ashtag # and then a name of your choice, like for example server name since this is what reference will hold, a reference to this element like:</p>
 <p><code>&#60;input type="text"    <br>
-                class="form-control"<br>
-                <b>#serverNameInput</b>></code></p>
+  class="form-control"<br>
+  <b>#serverNameInput</b>></code></p>
 <p>Now important, this reference will hold a reference to this element, so not to the value we entered there, to the whole HTML element with all its properties.</p>
 <p>You can create and yse them evertwgere in your template but importat, only there, not inside your TypeScript code, only in the template.</p>
 <input type="text"
-class="form-control"
-#serverNameInput
-placeholder="Qualcosa">
+       class="form-control"
+       #serverNameInput
+       placeholder="Qualcosa">
 This is the Placeholder of the Input above -> {{serverNameInput.placeholder}} <br>
 This is the Type of the Input above -> {{serverNameInput.type}}
 <br>
@@ -472,11 +472,11 @@ This is the Type of the Input above -> {{serverNameInput.type}}
 <p>And if you want to pass those information into a component from outside it is possible to use the :ng-content". </p>
 <ul>
   <li>If for example we take the code above and we want to pass that code into the template component <code> &#60;app-l75-ngcomponent>&#60;/app-l75-ngcomponent></code><br>
-  It is possible to write something like: <br>
-  <code>&#60;app-l75-ngcomponent> <br>
-    &#60;p *ngIf="status75 == false"> status is NOT ok &#60;/p> <br>
-    &#60;p *ngIf="status75 == true"> status is OK &#60;/p> <br>
-    &#60;/app-l75-ngcomponent></code></li>
+    It is possible to write something like: <br>
+    <code>&#60;app-l75-ngcomponent> <br>
+      &#60;p *ngIf="status75 == false"> status is NOT ok &#60;/p> <br>
+      &#60;p *ngIf="status75 == true"> status is OK &#60;/p> <br>
+      &#60;/app-l75-ngcomponent></code></li>
 </ul>
 status 75 is -> {{status75}}
 <button class="btn btn-primary" (click)="changeStatus75()">Change Status</button>
@@ -556,3 +556,15 @@ status 75 is -> {{status75}}
     </div>
   </div>
 </div>
+<hr>
+<h3>Lesson 90 -> ngFor and ngIf Recap</h3>
+<p>We cannot have more than one structural directive on the same element</p>
+<ul>
+  <li>This following sintax is wrong: <br>
+    <code>&#60;div <br>
+      *ngFor="let number of numbers" <br>
+      <b>*ngIf="number === 1"</b>> </code></li>
+</ul>
+
+
+<app-l90-ng-for-and-ng-if></app-l90-ng-for-and-ng-if>
