@@ -47,6 +47,7 @@ import {BetterHighlightDirective} from "./directive/better-highlight/better-high
 import { HighlightHostlistenerDirective } from './directive/highlightHostlistener/highlight-hostlistener.directive';
 import {HighlightHostbindingDirective} from "./directive/highlight-hostbinding/highlight-hostbinding.directive";
 import { HighlightHostlistenerBindingDirective } from './directive/highlightHostlistenerBinding/highlight-hostlistener-binding.directive';
+import { UnlessDirective } from './directive/unless/unless.directive';
 
 
 @NgModule({
@@ -96,6 +97,7 @@ import { HighlightHostlistenerBindingDirective } from './directive/highlightHost
     HighlightHostlistenerDirective,
     HighlightHostbindingDirective,
     HighlightHostlistenerBindingDirective,
+    UnlessDirective,
   ],
   imports: [
     BrowserModule,
