@@ -18,4 +18,9 @@ export class S6ShoppingListComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  onIngredientAdded(ingredient: IngredientModel) {
+    //Push the new ingredient come from the ./s6-shopping-edit.component.html into the ingredients array
+    this.ingredients.push(ingredient);
+  }
 }
