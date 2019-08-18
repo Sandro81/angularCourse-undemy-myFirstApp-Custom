@@ -7,7 +7,8 @@ export class UnlessDirective {
 
   // Every time the input changes, we want to execute a method.
   // With 'set' we set a method (that is always a property)
-  @Input() set unless(condition: boolean) {
+  // the method has to share the name of the selector [appUnless]
+  @Input() set appUnless(condition: boolean) {
     //Then we can check if the condition is true or not
     if (!condition) {
       // this create a view in this view container

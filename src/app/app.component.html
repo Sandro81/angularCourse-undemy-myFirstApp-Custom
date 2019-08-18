@@ -718,3 +718,45 @@ we are able to change the class and the style of the element using the [ngClass]
 
 <hr>
 <h3>Lesson 99 -> Building a Structural Directive - How to create a Structural Directive</h3>
+<p>Example of Structural Directive:</p>
+<code>
+  import &#123;Directive, Input, TemplateRef, ViewContainerRef} from '@angular/core'; <br>
+  <br>
+  @Directive(&#123;<br>
+  selector: '[appUnless]'<br>
+  })<br>
+  export class UnlessDirective &#123;<br>
+</code>
+  // Every time the input changes, we want to execute a method.<br>
+  // With 'set' we set a method (that is always a property)<br>
+  // the method has to share the name of the selector [appUnless]<br>
+<code>
+  @Input() set appUnless(condition: boolean) &#123;<br></code>
+  //Then we can check if the condition is true or not<br>
+  <code>
+  if (!condition) &#123;<br></code>
+  // this create a view in this view container<br>
+    <code>
+  this.vcRef.createEmbeddedView(this.templateRef);<br>
+  } else &#123;<br></code>
+  // If the condition is, in this case, true, we called the clear() method to remove everything from this place in the DOM<br>
+      <code>
+  this.vcRef.clear();<br>
+  }<br>
+  }<br>
+  <br></code>
+  // The template, where the directive is placed, can be enjected by adding TemplateRef<br>
+  // 'any' -> represent the generic type<br>
+  // The template is 'What?' the second question is 'Where?'<br>
+  // ViewContainerRef -> that marks the place where we placed this directory in the document<br>
+        <code>
+  constructor(private templateRef: TemplateRef<&#60;any>, private vcRef: ViewContainerRef) &#123; }<br>
+  }<br></code>
+
+<app-l99-building-structural-directive></app-l99-building-structural-directive>
+
+<code>
+  &#60;div <b>*appUnless="!onlyOdd"</b>><br>
+    // some code here...<br>
+  &#60;/div><br>
+</code>
