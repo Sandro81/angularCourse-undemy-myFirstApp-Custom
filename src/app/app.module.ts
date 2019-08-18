@@ -39,6 +39,7 @@ import { S6RecipeListComponent } from './section6/s6-recipes/s6-recipe-list/s6-r
 import { S6ShoppingListComponent } from './section6/s6-shopping-list/s6-shopping-list.component';
 import { S6ShoppingEditComponent } from './section6/s6-shopping-list/s6-shopping-edit/s6-shopping-edit.component';
 import { S6RecipeItemComponent } from './section6/s6-recipes/s6-recipe-list/s6-recipe-item/s6-recipe-item.component';
+import { L90NgForAndNgIfComponent } from './lessons/l90-ng-for-and-ng-if/l90-ng-for-and-ng-if.component';
 
 
 @NgModule({
@@ -80,6 +81,7 @@ import { S6RecipeItemComponent } from './section6/s6-recipes/s6-recipe-list/s6-r
     S6ShoppingListComponent,
     S6ShoppingEditComponent,
     S6RecipeItemComponent,
+    L90NgForAndNgIfComponent,
   ],
   imports: [
     BrowserModule,
