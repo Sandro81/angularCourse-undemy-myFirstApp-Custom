@@ -50,6 +50,8 @@ import { HighlightHostlistenerBindingDirective } from './directive/highlightHost
 import { UnlessDirective } from './directive/unless/unless.directive';
 import { L99BuildingStructuralDirectiveComponent } from './lessons/l99-building-structural-directive/l99-building-structural-directive.component';
 import { L100NgSwitchComponent } from './lessons/l100-ng-switch/l100-ng-switch.component';
+import { DropdownDirective } from './directive/dropdown/dropdown.directive';
+import { L101DropdownDirectiveComponent } from './lessons/l101-dropdown-directive/l101-dropdown-directive.component';
 
 
 @NgModule({
@@ -102,6 +104,8 @@ import { L100NgSwitchComponent } from './lessons/l100-ng-switch/l100-ng-switch.c
     UnlessDirective,
     L99BuildingStructuralDirectiveComponent,
     L100NgSwitchComponent,
+    DropdownDirective,
+    L101DropdownDirectiveComponent,
   ],
   imports: [
     BrowserModule,
