@@ -41,6 +41,7 @@ import { S6ShoppingEditComponent } from './section6/s6-shopping-list/s6-shopping
 import { S6RecipeItemComponent } from './section6/s6-recipes/s6-recipe-list/s6-recipe-item/s6-recipe-item.component';
 import { L90NgForAndNgIfComponent } from './lessons/l90-ng-for-and-ng-if/l90-ng-for-and-ng-if.component';
 import { GetGitsComponent } from './get-gits/get-gits.component';
+import { L91NgClassNgStyleRecapComponent } from './lessons/l91-ng-class-ng-style-recap/l91-ng-class-ng-style-recap.component';
 
 
 @NgModule({
@@ -84,6 +85,7 @@ import { GetGitsComponent } from './get-gits/get-gits.component';
     S6RecipeItemComponent,
     L90NgForAndNgIfComponent,
     GetGitsComponent,
+    L91NgClassNgStyleRecapComponent,
   ],
   imports: [
     BrowserModule,
