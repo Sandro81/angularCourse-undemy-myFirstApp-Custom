@@ -49,6 +49,7 @@ import {HighlightHostbindingDirective} from "./directive/highlight-hostbinding/h
 import { HighlightHostlistenerBindingDirective } from './directive/highlightHostlistenerBinding/highlight-hostlistener-binding.directive';
 import { UnlessDirective } from './directive/unless/unless.directive';
 import { L99BuildingStructuralDirectiveComponent } from './lessons/l99-building-structural-directive/l99-building-structural-directive.component';
+import { L100NgSwitchComponent } from './lessons/l100-ng-switch/l100-ng-switch.component';
 
 
 @NgModule({
@@ -100,6 +101,7 @@ import { L99BuildingStructuralDirectiveComponent } from './lessons/l99-building-
     HighlightHostlistenerBindingDirective,
     UnlessDirective,
     L99BuildingStructuralDirectiveComponent,
+    L100NgSwitchComponent,
   ],
   imports: [
     BrowserModule,
