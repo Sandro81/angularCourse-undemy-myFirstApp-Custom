@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class L100NgSwitchComponent implements OnInit {
 
+  value: number = 0;
+
   constructor() { }
 
   ngOnInit() {

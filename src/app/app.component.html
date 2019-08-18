@@ -763,3 +763,15 @@ we are able to change the class and the style of the element using the [ngClass]
 
 <hr>
 <h3>Lesson 100 -> Understanding ngSwitch</h3>
+<p>The ngSwitch has the following syntax structure:</p>
+<code>
+&#60;div [ngSwitch]="value"> <br>
+  &#60;p *ngSwitchCase="5">Value is 5&#60;/p><br>
+  &#60;p *ngSwitchCase="10">Value is 10&#60;/p><br>
+  &#60;p *ngSwitchCase="100">Value is 100&#60;/p><br>
+  &#60;p *ngSwitchDefault>Value is Default&#60;/p><br>
+  &#60;/div><br>
+</code>
+<p>Test it:</p>
+<p>If you choose between 5, 10 and 100, the value will be one of those 3 values, </p>
+<app-l100-ng-switch></app-l100-ng-switch>
