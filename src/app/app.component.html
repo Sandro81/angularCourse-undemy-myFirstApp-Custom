@@ -570,3 +570,59 @@ status 75 is -> {{status75}}
 <app-get-gits></app-get-gits>
 
 <app-l90-ng-for-and-ng-if></app-l90-ng-for-and-ng-if>
+
+<hr>
+<h3>Lesson 91 -> ngClass and ngStyle Recap</h3>
+<p>Using the Property Binding -> [property]="data" <- <br>
+we are able to change the class and the style of the element using the [ngClass] and the [ngStyle]</p>
+
+  <code>
+    &#60;li <br>
+    class="list-group-item"<br>
+    <b>[ngClass]="&#123;odd: odd % 2 !== 0}"</b><br>
+    <b>[ngStyle]="&#123;backgroundColor: odd % 2 !== 0 ? 'black' : 'yellow'}"</b><br>
+    *ngFor="let odd of oddNumbers"><br>
+    &#123; &#123;odd}}<br>
+    &#60;/li><br>
+      *ngIf="number === 1"> </code>
+<app-l91-ng-class-ng-style-recap></app-l91-ng-class-ng-style-recap>
+
+<hr>
+<h3>Lesson 92 -> Creating a Basic Attribute Directive</h3>
+<p>An example of directive will be the following:</p>
+<code>
+  import &#123;Directive, ElementRef, OnInit} from "@angular/core"; <br>
+  <br>
+  @Directive(&#123; <br>
+  selector: '[appHighlight]'<br>
+  })<br>
+  export class BasicHighlightDirective implements OnInit &#123;<br>
+  constructor(private elementRef: ElementRef) &#123;}<br>
+  <br>
+  ngOnInit(): void &#123;<br>
+  this.elementRef.nativeElement.style.backgroundColor = 'green';<br>
+  }<br>
+  <br>
+
+  }<br>
+</code>
+
+<p>When the Directive is created, we need to import it into 'app.modules.ts'</p>
+<code>import &#123;BasicHighlightDirective} from "./directive/basic-highlight/basic-highlight-directive";
+  <br>
+  <br>
+  @NgModule(&#123;<br>
+  declarations: [<br>
+    <b>BasicHighlightDirective</b>,<br>
+  ],<br>
+  imports: [<br>
+  BrowserModule,<br>
+  AppRoutingModule,<br>
+  FormsModule,<br>
+  ],<br>
+  providers: [],<br>
+  bootstrap: [AppComponent]<br>
+  })<br>
+  export class AppModule &#123; }<br>
+
+</code>

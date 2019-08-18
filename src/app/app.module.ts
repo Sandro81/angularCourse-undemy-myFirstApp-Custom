@@ -42,10 +42,12 @@ import { S6RecipeItemComponent } from './section6/s6-recipes/s6-recipe-list/s6-r
 import { L90NgForAndNgIfComponent } from './lessons/l90-ng-for-and-ng-if/l90-ng-for-and-ng-if.component';
 import { GetGitsComponent } from './get-gits/get-gits.component';
 import { L91NgClassNgStyleRecapComponent } from './lessons/l91-ng-class-ng-style-recap/l91-ng-class-ng-style-recap.component';
+import {BasicHighlightDirective} from "./directive/basic-highlight/basic-highlight-directive";
 
 
 @NgModule({
   declarations: [
+    BasicHighlightDirective,
     AppComponent,
     ServerComponent,
     ServersComponent,
