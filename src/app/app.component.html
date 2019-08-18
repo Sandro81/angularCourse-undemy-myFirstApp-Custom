@@ -633,8 +633,30 @@ we are able to change the class and the style of the element using the [ngClass]
 <p appHighlight>Style me with basic directive!</p>
 
 <hr>
-<h3>Lesson 93 -> Using the Renderer to build a Better Attribute Directive</h3>
+<h3>Lesson 93 -> Using the Renderer to build a Better Attribute Directive - Renderer2 -</h3>
 
 <code> &#60;p <b>appHighlight</b>> Style me with basic directive!&#60;/p> </code>
 <p>This however is not the best way of changing that style because as you might recall from some earlier lecture in this course, accessing elements directly like this is not a good practice, you should use a different tool which I'll show you in a second because Angular actually is also able  to render your templates without a DOM and then these properties might not be available.</p>
 <p>To generate a new <b>Directive</b> using the terminal, type <code>ng generate directive name</code> or <code>ng g d name</code></p>
+
+<p appBetterHighlight>Style me with a better directive!</p>
+<code> &#60;p <b>appBetterHighlight</b>> Style me with basic directive!&#60;/p> </code>
+
+<code>import &#123;Directive, ElementRef, OnInit, <b>Renderer2</b>} from '@angular/core'; <br>
+  <br>
+  @Directive(&#123;<br>
+  selector: '[appBetterHighlight]'<br>
+  })<br>
+  export class BetterHighlightDirective implements OnInit&#123;<br>
+  <br>
+  constructor(private elRef: ElementRef, private renderer: <b>Renderer2</b>) &#123; }<br>
+  <br>
+  ngOnInit(): void &#123;<br>
+  this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'red');<br>
+  }<br>
+  }</code>
+<p>Now why is it a better approach? Angular is not limited to running in the browser here, it for example also works with service workers and these are environments where you might not have access to the DOM. So if you try to change the DOM as you did here in basic highlight by directly accessing the native element and the style of this element, you might get an error in some circumstances. Now to be honest, in most circumstances you probably don't and you probably also know if your app is going to run in the browser or not, still it is a better practice to use the renderer for DOM access and to use the methods the renderer provides to access the DOM.</p>
+
+
+<hr>
+<h3>Lesson 95 -> Using HostListener to Listen to Host Events</h3>

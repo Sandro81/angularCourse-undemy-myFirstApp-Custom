@@ -44,6 +44,7 @@ import { GetGitsComponent } from './get-gits/get-gits.component';
 import { L91NgClassNgStyleRecapComponent } from './lessons/l91-ng-class-ng-style-recap/l91-ng-class-ng-style-recap.component';
 import {BasicHighlightDirective} from "./directive/basic-highlight/basic-highlight-directive";
 import {BetterHighlightDirective} from "./directive/better-highlight/better-highlight.directive";
+import { HighlightHostlistenerDirective } from './directive/highlightHostlistener/highlight-hostlistener.directive';
 
 
 @NgModule({
@@ -90,6 +91,7 @@ import {BetterHighlightDirective} from "./directive/better-highlight/better-high
     GetGitsComponent,
     L91NgClassNgStyleRecapComponent,
     BetterHighlightDirective,
+    HighlightHostlistenerDirective,
   ],
   imports: [
     BrowserModule,
