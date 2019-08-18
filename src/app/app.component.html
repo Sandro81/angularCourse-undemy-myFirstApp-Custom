@@ -676,3 +676,13 @@ we are able to change the class and the style of the element using the [ngClass]
 
 <hr>
 <h3>Lesson 96-> Using HostBinding to Bind to Host Properties - instead using Renderer2</h3>
+
+<p>With the Decorator <b>@HostBinding</b> we to declare which property of the element we want to Bind:</p>
+<code>@HostBinding(<b>'style.backgroundColor'</b>) backgroundColor: string = 'transparent';</code>
+<p>In the above case it was bound the property <u>style.backgroundColor</u> using the CammelCase text.</p>
+<p>That means we do not longer need to define into the constructor the 'Renderer2' object to be able to access to the element properties</p>
+
+<p appHighlightHostbinding>Style me with a better directive!</p>
+
+<hr>
+<h3>Lesson 97 -> Binding to Directive Properties</h3>

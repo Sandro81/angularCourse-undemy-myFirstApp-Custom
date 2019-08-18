@@ -45,6 +45,7 @@ import { L91NgClassNgStyleRecapComponent } from './lessons/l91-ng-class-ng-style
 import {BasicHighlightDirective} from "./directive/basic-highlight/basic-highlight-directive";
 import {BetterHighlightDirective} from "./directive/better-highlight/better-highlight.directive";
 import { HighlightHostlistenerDirective } from './directive/highlightHostlistener/highlight-hostlistener.directive';
+import {HighlightHostbindingDirective} from "./directive/highlight-hostbinding/highlight-hostbinding.directive";
 
 
 @NgModule({
@@ -92,6 +93,7 @@ import { HighlightHostlistenerDirective } from './directive/highlightHostlistene
     L91NgClassNgStyleRecapComponent,
     BetterHighlightDirective,
     HighlightHostlistenerDirective,
+    HighlightHostbindingDirective,
   ],
   imports: [
     BrowserModule,
