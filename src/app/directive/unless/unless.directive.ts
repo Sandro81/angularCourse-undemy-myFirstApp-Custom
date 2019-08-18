@@ -10,9 +10,10 @@ export class UnlessDirective {
   @Input() set unless(condition: boolean) {
     //Then we can check if the condition is true or not
     if (!condition) {
-      // this create a view in this view containor
+      // this create a view in this view container
       this.vcRef.createEmbeddedView(this.templateRef);
     } else {
+      // If the condition is, in this case, true, we called the clear() method to remove everything from this place in the DOM
       this.vcRef.clear();
     }
   }
