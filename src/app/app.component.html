@@ -661,7 +661,7 @@ we are able to change the class and the style of the element using the [ngClass]
 <hr>
 <h3>Lesson 95 -> Using HostListener to Listen to Host Events</h3>
 
-<p>With the Decorator <b>@HostListener</b> it is possible to associate an event to the a directive as showing below:</p>
+<p>With the  <b>@HostListener</b> Decorator it is possible to associate an event to the a directive as showing below:</p>
 <p appHighlightHostlistener>Style me with a better directive!</p>
 
 <code>
@@ -677,7 +677,7 @@ we are able to change the class and the style of the element using the [ngClass]
 <hr>
 <h3>Lesson 96-> Using HostBinding to Bind to Host Properties - instead using Renderer2</h3>
 
-<p>With the Decorator <b>@HostBinding</b> we to declare which property of the element we want to Bind:</p>
+<p>With the  <b>@HostBinding</b> Decorator we to declare which property of the element we want to Bind:</p>
 <code>@HostBinding(<b>'style.backgroundColor'</b>) backgroundColor: string = 'transparent';</code>
 <p>In the above case it was bound the property <u>style.backgroundColor</u> using the CammelCase text.</p>
 <p>That means we do not longer need to define into the constructor the 'Renderer2' object to be able to access to the element properties</p>
@@ -686,3 +686,21 @@ we are able to change the class and the style of the element using the [ngClass]
 
 <hr>
 <h3>Lesson 97 -> Binding to Directive Properties</h3>
+<p>It is possible to access to the value of a directive from outside, usign the <b>@Input</b> decorator</p>
+<p appHighlightHostlistenerBinding [defaultColor]="'red'" [highlightColor]="'green'">Style me with a better directive!</p>
+<p>The paragraph above, is coded using passing the colors by Property Binding [property]="data"</p>
+
+<code>&#60;p appHighlightHostlistenerBinding <b>[defaultColor]="'red'"</b> <b>[highlightColor]="'green'"</b>></code>
+<br>
+<p>Follow the example Directive code:</p>
+<code>
+  <b>@Input() defaultColor: string = 'transparent'; <br>
+  @Input() highlightColor: string = 'orange';</b><br>
+  @HostBinding('style.backgroundColor') backgroundColor: string;<br>
+  <br>
+  @HostListener('mouseenter') mouseover(eventData: Event) &#123;<br>
+  this.backgroundColor = this.highlightColor;<br><br>
+  @HostListener('mouseleave') mouseleave(eventData: Event) &#123;<br>
+  this.backgroundColor = this.defaultColor;<br>
+  }<br>
+</code>
