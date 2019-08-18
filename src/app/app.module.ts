@@ -40,6 +40,7 @@ import { S6ShoppingListComponent } from './section6/s6-shopping-list/s6-shopping
 import { S6ShoppingEditComponent } from './section6/s6-shopping-list/s6-shopping-edit/s6-shopping-edit.component';
 import { S6RecipeItemComponent } from './section6/s6-recipes/s6-recipe-list/s6-recipe-item/s6-recipe-item.component';
 import { L90NgForAndNgIfComponent } from './lessons/l90-ng-for-and-ng-if/l90-ng-for-and-ng-if.component';
+import { GetGitsComponent } from './get-gits/get-gits.component';
 
 
 @NgModule({
@@ -82,11 +83,13 @@ import { L90NgForAndNgIfComponent } from './lessons/l90-ng-for-and-ng-if/l90-ng-
     S6ShoppingEditComponent,
     S6RecipeItemComponent,
     L90NgForAndNgIfComponent,
+    GetGitsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

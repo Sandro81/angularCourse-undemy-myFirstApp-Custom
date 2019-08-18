@@ -560,11 +560,13 @@ status 75 is -> {{status75}}
 <h3>Lesson 90 -> ngFor and ngIf Recap</h3>
 <p>We cannot have more than one structural directive on the same element</p>
 <ul>
-  <li>This following sintax is wrong: <br>
+  <li>That following sintax is wrong: <br>
     <code>&#60;div <br>
       *ngFor="let number of numbers" <br>
       <b>*ngIf="number === 1"</b>> </code></li>
 </ul>
 
+<p>To solve this, we have to separate the two structore in different elements, like showing below:</p>
+<app-get-gits></app-get-gits>
 
 <app-l90-ng-for-and-ng-if></app-l90-ng-for-and-ng-if>
