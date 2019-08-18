@@ -704,3 +704,15 @@ we are able to change the class and the style of the element using the [ngClass]
   this.backgroundColor = this.defaultColor;<br>
   }<br>
 </code>
+<hr>
+<h3>Lesson 98 -> What Happens behind the Scenes on Structural Directives - [ngIf] instead of *ngIf</h3>
+<p>What is useful to know, the * using in the syntax *ngIf or *ngFor on the directve, it is not a mandatory syntax, instead you can also use the ng-template element adding the [ngIf] property binding to the element: </p>
+
+<code>
+  &#60;ng-template [ngIf]="!onlyOdd"><br>
+  &#60;li><br>
+      Some stuff here...<br>
+  &#60;/li><br>
+  &#60;/ng-template><br>
+</code>
+
