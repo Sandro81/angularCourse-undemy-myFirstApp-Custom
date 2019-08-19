@@ -7,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class L101BisComponent implements OnInit {
 
-  show: boolean;
+  showDrop000: boolean;
+  showDrop001: boolean;
 
   constructor() { }
 
   ngOnInit() {
-    this.show = false;
+    this.showDrop000 = false;
+    this.showDrop001 = false;
   }
-  showDropdown(){
-    this.show = !this.show;
-  }
+
 
 
 }
