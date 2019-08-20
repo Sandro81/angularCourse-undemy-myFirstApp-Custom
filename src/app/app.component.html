@@ -785,3 +785,29 @@ we are able to change the class and the style of the element using the [ngClass]
 <p>To solve it, I have to reinvent nest the part of the dropdown in *ngIf directives</p>
 <app-l101-bis></app-l101-bis>
 
+<hr>
+<h3>Lesson 105 -> Creating a Logging Service</h3>
+<p>A service is just the normal TypeScript class, like this: <br>
+  <code>export class LoggingService &#123;<br>
+    // Some code here...
+    <br>
+    }
+  </code><br>
+  this can already be used as a service.</p>
+
+<p>In the main time, it </p>
+<p>It is possible to instance the service in the way below:</p>
+<code>    const service = new LoggingService();<br>
+  service.logStatusChange(accountStatus);</code>
+
+<p>but this is NOT how you  use a service in Angular. The reason for this will become more clear throughout this module but generally, Angular provides a much better way of getting access to your services and therefore, you should not create the instances manually.</p>
+
+<hr>
+<h3>Lesson 106 -> Injecting the Logging Service into Components</h3>
+
+
+
+
+<app-l105-new-account></app-l105-new-account>
+<app-l105-account></app-l105-account>
+

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { LoggingService } from "../../services/logging.service";
 
 @Component({
   selector: 'app-l105-new-account',
@@ -14,6 +15,8 @@ export class L105NewAccountComponent  {
       name: accountName,
       status: accountStatus
     });
-    console.log('A server status changed, new status: ' + accountStatus);
+
+    const service = new LoggingService();
+    service.logStatusChange(accountStatus);
   }
 }
