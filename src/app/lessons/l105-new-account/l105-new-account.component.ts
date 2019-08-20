@@ -4,7 +4,8 @@ import { LoggingService } from "../../services/logging.service";
 @Component({
   selector: 'app-l105-new-account',
   templateUrl: './l105-new-account.component.html',
-  styleUrls: ['./l105-new-account.component.css']
+  styleUrls: ['./l105-new-account.component.css'],
+  providers: [LoggingService]
 })
 export class L105NewAccountComponent  {
 
@@ -17,6 +18,8 @@ export class L105NewAccountComponent  {
       name: accountName,
       status: accountStatus
     });
+
+    this.loggingService.logStatusChange(accountStatus);
 
    /* const service = new LoggingService();
     service.logStatusChange(accountStatus);*/
