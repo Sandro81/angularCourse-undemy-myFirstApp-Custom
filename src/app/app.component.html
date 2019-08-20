@@ -805,7 +805,11 @@ we are able to change the class and the style of the element using the [ngClass]
 <hr>
 <h3>Lesson 106 -> Injecting the Logging Service into Components</h3>
 
-
+<p>To Inject a service into a component we need to inform Angular that we require such an instance.</p>
+<p> To inform Angular that we need to inject a service, we need to declare it into the 'constructor':</p>
+<code>  constructor(private loggingService: LoggingService) &#123;}</code>
+<p>Why does this matter if we write this in the constructor?</p>
+<p>Think about who gives us the instance of this account component, this new account component here.</p>
 
 
 <app-l105-new-account></app-l105-new-account>
