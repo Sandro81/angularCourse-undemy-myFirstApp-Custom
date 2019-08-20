@@ -53,6 +53,8 @@ import { L100NgSwitchComponent } from './lessons/l100-ng-switch/l100-ng-switch.c
 import { DropdownDirective } from './directive/dropdown/dropdown.directive';
 import { L101DropdownDirectiveComponent } from './lessons/l101-dropdown-directive/l101-dropdown-directive.component';
 import { L101BisComponent } from './lessons/l101-bis/l101-bis.component';
+import { L105AccountComponent } from './lessons/l105-account/l105-account.component';
+import { L105NewAccountComponent } from './lessons/l105-new-account/l105-new-account.component';
 
 
 @NgModule({
@@ -108,6 +110,8 @@ import { L101BisComponent } from './lessons/l101-bis/l101-bis.component';
     DropdownDirective,
     L101DropdownDirectiveComponent,
     L101BisComponent,
+    L105AccountComponent,
+    L105NewAccountComponent,
   ],
   imports: [
     BrowserModule,
