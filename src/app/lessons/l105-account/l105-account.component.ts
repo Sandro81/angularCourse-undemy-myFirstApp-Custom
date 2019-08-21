@@ -1,21 +1,24 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {LoggingService} from "../../services/logging.service";
+import {AccountService} from "../../services/account.service";
 
 @Component({
   selector: 'app-l105-account',
   templateUrl: './l105-account.component.html',
   styleUrls: ['./l105-account.component.css'],
-  providers: [LoggingService]
+  providers: [LoggingService, AccountService]
 })
 export class L105AccountComponent {
 
+  // we receive the data from outside
   @Input() account: {name: string, status: string};
   @Input() id: number;
-  @Output() statusChanged = new EventEmitter<{id: number, newStatus: string}>();
-  constructor(private loggingService: LoggingService) {}
+
+  constructor(private loggingService: LoggingService,
+              private accountsService: AccountService) {}
 
   onSetTo(status: string) {
-    this.statusChanged.emit({id: this.id, newStatus: status});
+    this.accountsService.updateStatus(this.id, status);
     this.loggingService.logStatusChange(status);
   }
 
