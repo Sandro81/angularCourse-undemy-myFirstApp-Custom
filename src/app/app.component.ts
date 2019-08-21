@@ -88,6 +88,7 @@ export class AppComponent {
   }
   //......................
 
-
+  // that array variable initialize the account.service.ts
+accounts: {name: string, status: string}[] = [];
 
 }
