@@ -1,11 +1,13 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AccountService} from "./services/account.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  providers: [AccountService],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'Udemy Course from 06 to 18 Custom';
   name = 'My first App';
   randomVariable = 'SandoR';
@@ -88,7 +90,16 @@ export class AppComponent {
   }
   //......................
 
-  // that array variable initialize the account.service.ts
-accounts: {name: string, status: string}[] = [];
 
+  // Section 9 Lesson 107
+  // that array variable initialize the account.service.ts
+  accounts: {name: string, status: string}[] = [];
+
+  // We need the constructor to inject the sercice into the component
+  constructor(private accountsService: AccountService) {}
+
+  ngOnInit(): void {
+    this.accounts = this.accountsService.accounts;
+  }
+  //......................
 }
