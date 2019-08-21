@@ -55,6 +55,8 @@ import { L101DropdownDirectiveComponent } from './lessons/l101-dropdown-directiv
 import { L101BisComponent } from './lessons/l101-bis/l101-bis.component';
 import { L105AccountComponent } from './lessons/l105-account/l105-account.component';
 import { L105NewAccountComponent } from './lessons/l105-new-account/l105-new-account.component';
+import {AccountService} from "./services/account.service";
+import {LoggingService} from "./services/logging.service";
 
 
 @NgModule({
@@ -119,7 +121,7 @@ import { L105NewAccountComponent } from './lessons/l105-new-account/l105-new-acc
     FormsModule,
 
   ],
-  providers: [],
+  providers: [AccountService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

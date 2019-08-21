@@ -836,11 +836,34 @@ we are able to change the class and the style of the element using the [ngClass]
 <code>  providers: [LoggingService, AccountService]</code>
 <p>If the component is a child in hierarcky path, you need just to import the service and declare it in the constructor</p>
 
+<h3>Lesson 110 -> Injecting Services into Services - @Injectable</h3>
+<p>The highest possible level is actually not the app component, so let's remove it here, this providers array, leave it in the constructor and leave the import but the highest possible level is in the app module.</p>
+<p>With that little addition here, we're making sure that our whole application, everything in our application receives the same instance of the service unless it overwrites it as we did before.</p>
+
+<code>
+  ..... <br>
+  imports: [<br>
+  BrowserModule,<br>
+  AppRoutingModule,<br>
+  FormsModule,<br>
+  ],<br>
+  providers: [AccountService, LoggingService],<br>
+  bootstrap: [AppComponent]<br>
+  })<br>
+  export class AppModule  &#123; }
+</code>
 
 
-<app-l105-new-account (accountAdded)="onAccountAdded($event)"></app-l105-new-account>
+<p>IMPORTANT -> if you inject a service into something, this something needs to have some metadata attached to it.</p>
+<p>Now a component has some metadata because we have @component, a directive has some metadata because we have @directive, a service doesn't have any metadata. It's just how Angular works that we need to attach some metadata and of course not any metadata, you shouldn't attach @component here. There is a specific metadata you should attach in such cases, it's <b>@injectable</b> which needs to be imported from @angular/core.</p>
+
+<hr>
+<h3>Lesson 111 -> Using Services for Cross-Component Communication</h3>
+<p>We want to provide some event which we can trigger in one component and listen to in another.</p>
+
+<app-l105-new-account></app-l105-new-account>
 <hr>
 <app-l105-account *ngFor="let acc of accounts; let i = index"
                   [account]="acc"
                   [id]="i"
-                  (statusChanged)="onStatusChanged($event)"></app-l105-account>
+                  ></app-l105-account>

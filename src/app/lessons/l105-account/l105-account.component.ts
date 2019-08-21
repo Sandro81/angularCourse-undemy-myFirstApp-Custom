@@ -5,8 +5,7 @@ import {AccountService} from "../../services/account.service";
 @Component({
   selector: 'app-l105-account',
   templateUrl: './l105-account.component.html',
-  styleUrls: ['./l105-account.component.css'],
-  providers: [LoggingService]
+  styleUrls: ['./l105-account.component.css']
 })
 export class L105AccountComponent {
 
@@ -19,7 +18,6 @@ export class L105AccountComponent {
 
   onSetTo(status: string) {
     this.accountsService.updateStatus(this.id, status);
-    this.loggingService.logStatusChange(status);
   }
 
 
