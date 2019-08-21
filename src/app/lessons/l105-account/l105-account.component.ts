@@ -6,7 +6,7 @@ import {AccountService} from "../../services/account.service";
   selector: 'app-l105-account',
   templateUrl: './l105-account.component.html',
   styleUrls: ['./l105-account.component.css'],
-  providers: [LoggingService, AccountService]
+  providers: [LoggingService]
 })
 export class L105AccountComponent {
 

@@ -819,15 +819,28 @@ we are able to change the class and the style of the element using the [ngClass]
 <code>    this.loggingService.logStatusChange(accountStatus);</code>
 <p>a service can really help you to get more dry, to don't repeat yourself all the time but instead to really cleverly outsource your code into a service and have it there.</p>
 <hr>
+
+
+
+<hr>
+<h3>Lesson 108 -> Creating a Data Service</h3>
+<h4>Hierarchical Injector</h4>
+<ul><li>AppModule -> Same Instance of Service is Available <b>Application-wide</b>
+</li>
+<li>AppComponent -> Same Instance of Service is available fo <b>all Components</b> bu not for other Services</li>
+  <li>Any other Component -> Same Instance of Service is available for the <b>Component and all its child components</b></li>
+</ul>
+<hr>
+<h3>Lesson 109 -> How many Instances of Service Should It Be?</h3>
+<p>It's important to not override the Service in the component when we declare it in the providers.</p>
+<code>  providers: [LoggingService, AccountService]</code>
+<p>If the component is a child in hierarcky path, you need just to import the service and declare it in the constructor</p>
+
+
+
 <app-l105-new-account (accountAdded)="onAccountAdded($event)"></app-l105-new-account>
 <hr>
 <app-l105-account *ngFor="let acc of accounts; let i = index"
                   [account]="acc"
                   [id]="i"
                   (statusChanged)="onStatusChanged($event)"></app-l105-account>
-
-
-<hr>
-<h3>Lesson 107 -> Creating a Data Service</h3>
-
-<p></p>
