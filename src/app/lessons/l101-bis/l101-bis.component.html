@@ -4,16 +4,15 @@
     class="navbar-toggler"
     type="button"
     data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
+    data-target="#navbarSupportedContentBis"
+    aria-controls="navbarSupportedContentBis"
     aria-expanded="false"
     aria-label="Toggle navigation"
-    appDropdown
-    >
+    appDropdown>
     <span class="navbar-toggler-icon" (click)="showDrop000 = !showDrop000"></span>
   </button>
 
-  <div class="collapse navbar-collapse show" id="navbarSupportedContent" *ngIf="showDrop000 === true">
+  <div class="collapse navbar-collapse show" id="navbarSupportedContentBis" *ngIf="showDrop000 === true">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="javascript:void(0);">Home <span class="sr-only">(current)</span></a>
@@ -23,23 +22,17 @@
       </li>
       <li
         class="nav-item dropdown"
-        appDropdown
-
-        (click)="showDrop001 = !showDrop001"
-        >
+        appDropdown (click)="showDrop001 = !showDrop001">
         <a class="nav-link dropdown-toggle"
            href="javascript:void(0);"
-           id="navbarDropdown"
+           id="navbarDropdownBIS"
            role="button"
            data-toggle="dropdown"
            aria-haspopup="true"
-           aria-expanded="true"
-           >
+           aria-expanded="false">
           Dropdown
         </a>
-        <div class="dropdown-menu show"
-             aria-labelledby="navbarDropdown"
-             *ngIf="showDrop001 === true">
+        <div class="dropdown-menu show" aria-labelledby="navbarDropdownBIS" *ngIf="showDrop001 === true">
           <a class="dropdown-item" href="javascript:void(0);">Action</a>
           <a class="dropdown-item" href="javascript:void(0);">Another action</a>
           <div class="dropdown-divider"></div>
