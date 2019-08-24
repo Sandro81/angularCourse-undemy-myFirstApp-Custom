@@ -61,6 +61,13 @@ import { L112InactiveUsersComponent } from './lessons/l112-inactive-users/l112-i
 import { L112ActiveUsersComponent } from './lessons/l112-active-users/l112-active-users.component';
 import {UsersService} from './services/users.service';
 import {CounterService} from './services/counter.service';
+import { S9HeaderComponent } from './section9/s9-header/s9-header.component';
+import { S9RecipesComponent } from './section9/s9-recipes/s9-recipes.component';
+import { S9ShoppingListComponent } from './section9/s9-shopping-list/s9-shopping-list.component';
+import { S9RecipeDetailComponent } from './section9/s9-recipes/s9-recipe-detail/s9-recipe-detail.component';
+import { S9RecipeListComponent } from './section9/s9-recipes/s9-recipe-list/s9-recipe-list.component';
+import { S9RecipeItemComponent } from './section9/s9-recipes/s9-recipe-list/s9-recipe-item/s9-recipe-item.component';
+import { S9ShoppingEditComponent } from './section9/s9-shopping-list/s9-shopping-edit/s9-shopping-edit.component';
 
 
 @NgModule({
@@ -120,6 +127,13 @@ import {CounterService} from './services/counter.service';
     L105NewAccountComponent,
     L112InactiveUsersComponent,
     L112ActiveUsersComponent,
+    S9HeaderComponent,
+    S9RecipesComponent,
+    S9ShoppingListComponent,
+    S9RecipeDetailComponent,
+    S9RecipeListComponent,
+    S9RecipeItemComponent,
+    S9ShoppingEditComponent,
   ],
   imports: [
     BrowserModule,

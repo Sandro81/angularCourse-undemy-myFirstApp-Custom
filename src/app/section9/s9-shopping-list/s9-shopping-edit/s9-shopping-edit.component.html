@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form>
+      <div class="form-group">
+        <label for="s6-name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="s6-name"
+          aria-describedby="emailHelp"
+          placeholder="Enter name"
+          #nameInput>
+      </div>
+      <div class="form-group">
+        <label for="s6-amount">Amount</label>
+        <input
+          type="number"
+          class="form-control"
+          id="s6-amount"
+          placeholder="amount"
+          #amountInput>
+      </div>
+      <div class="form-group form-check">
+        <button type="submit" class="btn btn-success" (click)="onAddItem()">Add</button>
+        <button type="button" class="btn btn-danger">Del</button>
+        <button type="button" class="btn btn-primary">Clear</button>
+
+      </div>
+    </form>
+  </div>
+</div>
