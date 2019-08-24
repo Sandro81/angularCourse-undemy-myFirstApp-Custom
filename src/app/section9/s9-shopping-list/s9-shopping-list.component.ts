@@ -15,6 +15,12 @@ export class S9ShoppingListComponent implements OnInit {
 
   ngOnInit() {
     this.ingredients = this.slListService.getIngredients();
+    this.slListService.ingredientsChanged
+      .subscribe(
+        (ingredients: IngredientModel[]) => {
+          this.ingredients = ingredients;
+        }
+      );
   }
 
 }
