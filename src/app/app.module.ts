@@ -57,6 +57,8 @@ import { L105AccountComponent } from './lessons/l105-account/l105-account.compon
 import { L105NewAccountComponent } from './lessons/l105-new-account/l105-new-account.component';
 import {AccountService} from "./services/account.service";
 import {LoggingService} from "./services/logging.service";
+import { L112InactiveUsersComponent } from './lessons/l112-inactive-users/l112-inactive-users.component';
+import { L112ActiveUsersComponent } from './lessons/l112-active-users/l112-active-users.component';
 
 
 @NgModule({
@@ -114,6 +116,8 @@ import {LoggingService} from "./services/logging.service";
     L101BisComponent,
     L105AccountComponent,
     L105NewAccountComponent,
+    L112InactiveUsersComponent,
+    L112ActiveUsersComponent,
   ],
   imports: [
     BrowserModule,
