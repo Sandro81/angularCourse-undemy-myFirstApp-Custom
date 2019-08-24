@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RecipeModel} from '../../section9/s9-recipes/s9-recipe-list/recipe.model';
-import {RecipeService} from '../recipe.service';
+import {RecipeService} from '../../services/recipe.service';
 
 @Component({
   selector: 'app-s9-recipes',
@@ -17,13 +17,12 @@ export class S9RecipesComponent implements OnInit {
   ngOnInit() {
     this.recipeService.recipeSelected
       .subscribe(
-        // (recipe: RecipeModel) that is the argument list
         (recipe: RecipeModel) => {
           // the function body
           this.selectedRecipe = recipe;
         }
       );
-
+// (recipe: RecipeModel) that is the argument list
 
   }
 

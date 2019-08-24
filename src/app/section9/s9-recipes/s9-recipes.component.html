@@ -1,12 +1,12 @@
 
 <div class="row">
   <div class="col-md-5">
-    <app-s6-recipe-list></app-s6-recipe-list>
+    <app-s9-recipe-list></app-s9-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-s6-recipe-detail
+    <app-s9-recipe-detail
       *ngIf="selectedRecipe; else infoText"
-      [recipe]="selectedRecipe"></app-s6-recipe-detail>
+      [recipe]="selectedRecipe"></app-s9-recipe-detail>
     <ng-template #infoText>
       <p>Please select a Recipe!</p>
     </ng-template>

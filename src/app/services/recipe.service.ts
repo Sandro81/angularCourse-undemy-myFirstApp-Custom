@@ -1,4 +1,4 @@
-import {RecipeModel} from './s9-recipes/s9-recipe-list/recipe.model';
+import {RecipeModel} from '../section9/s9-recipes/s9-recipe-list/recipe.model';
 import {EventEmitter} from '@angular/core';
 
 export class RecipeService {

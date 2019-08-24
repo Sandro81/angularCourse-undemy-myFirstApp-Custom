@@ -68,6 +68,7 @@ import { S9RecipeDetailComponent } from './section9/s9-recipes/s9-recipe-detail/
 import { S9RecipeListComponent } from './section9/s9-recipes/s9-recipe-list/s9-recipe-list.component';
 import { S9RecipeItemComponent } from './section9/s9-recipes/s9-recipe-list/s9-recipe-item/s9-recipe-item.component';
 import { S9ShoppingEditComponent } from './section9/s9-shopping-list/s9-shopping-edit/s9-shopping-edit.component';
+import {ShoppingListService} from './section9/s9-shopping-list/shopping-list.service';
 
 
 @NgModule({
@@ -141,7 +142,7 @@ import { S9ShoppingEditComponent } from './section9/s9-shopping-list/s9-shopping
     FormsModule,
 
   ],
-  providers: [AccountService, LoggingService, UsersService, CounterService],
+  providers: [AccountService, LoggingService, UsersService, CounterService, ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
