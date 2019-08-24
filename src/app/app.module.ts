@@ -59,6 +59,8 @@ import {AccountService} from "./services/account.service";
 import {LoggingService} from "./services/logging.service";
 import { L112InactiveUsersComponent } from './lessons/l112-inactive-users/l112-inactive-users.component';
 import { L112ActiveUsersComponent } from './lessons/l112-active-users/l112-active-users.component';
+import {UsersService} from './services/users.service';
+import {CounterService} from './services/counter.service';
 
 
 @NgModule({
@@ -125,7 +127,7 @@ import { L112ActiveUsersComponent } from './lessons/l112-active-users/l112-activ
     FormsModule,
 
   ],
-  providers: [AccountService, LoggingService],
+  providers: [AccountService, LoggingService, UsersService, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../users.service';
+import { UsersService } from '../../services/users.service';
 @Component({
   selector: 'app-l112-inactive-users',
   templateUrl: './l112-inactive-users.component.html',
@@ -9,7 +9,7 @@ export class L112InactiveUsersComponent implements OnInit {
 
   users: string[];
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UsersService) {}
 
   ngOnInit() {
     this.users = this.userService.inactiveUsers;
